@@ -1,4 +1,4 @@
-const isNotifyEl = document.querySelector("#is_notify");
+const isNotifyEl = document.getElementById("is_notify");
 if (isNotifyEl != null) {
   isNotifyEl.checked = false;
 }
