@@ -12,12 +12,18 @@
   "content_scripts": [
     {
       "matches": [
-        "https://*.cybozu.com/g/*",
-        "https://*.cybozu-dev.com/g/*",
-        "https://*.kintone.com/g/*",
-        "https://*.kintone-dev.com/g/*",
-        "https://*.cybozu.cn/g/*",
-        "https://*.cybozu-dev.cn/g/*"
+        "https://*.cybozu.com/g/schedule/participate*",
+        "https://*.cybozu.com/g/schedule/leave*",
+        "https://*.cybozu-dev.com/g/schedule/participate*",
+        "https://*.cybozu-dev.com/g/schedule/leave*",
+        "https://*.kintone.com/g/schedule/participate*",
+        "https://*.kintone.com/g/schedule/leave*",
+        "https://*.kintone-dev.com/g/schedule/participate*",
+        "https://*.kintone-dev.com/g/schedule/leave*",
+        "https://*.cybozu.cn/g/schedule/participate*",
+        "https://*.cybozu.cn/g/schedule/leave*",
+        "https://*.cybozu-dev.cn/g/schedule/participate*",
+        "https://*.cybozu-dev.cn/g/schedule/leave*"
       ],
       "js": ["app/calmoon.js"],
       "run_at": "document_end"
