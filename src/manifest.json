@@ -19,7 +19,8 @@
         "https://*.cybozu.cn/g/*",
         "https://*.cybozu-dev.cn/g/*"
       ],
-      "js": ["app/calmoon.js"]
+      "js": ["app/calmoon.js"],
+      "run_at": "document_end"
     }
   ]
 }
