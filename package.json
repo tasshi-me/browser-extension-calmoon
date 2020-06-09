@@ -1,0 +1,9 @@
+{
+  "name": "browser-extension-calmoon",
+  "version": "1.0.0",
+  "description": "Disable \"Notify this update\" when you join/leave event on Garoon",
+  "main": "index.js",
+  "repository": "git@github.com:mshrtsr/browser-extension-calmoon.git",
+  "author": "Masaharu TASHIRO <masatsr.kit@gmail.com>",
+  "license": "MIT"
+}

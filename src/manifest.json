@@ -1,0 +1,25 @@
+{
+  "manifest_version": 2,
+  "name": "Calmoon for Garoon",
+  "version": "1.0",
+
+  "description": "Disable \"Notify this update\" when you join/leave event on Garoon https://garoon.cybozu.co.jp/",
+
+  "icons": {
+    "48": "icons/border-48.png"
+  },
+
+  "content_scripts": [
+    {
+      "matches": [
+        "https://*.cybozu.com/g/*",
+        "https://*.cybozu-dev.com/g/*",
+        "https://*.kintone.com/g/*",
+        "https://*.kintone-dev.com/g/*",
+        "https://*.cybozu.cn/g/*",
+        "https://*.cybozu-dev.cn/g/*"
+      ],
+      "js": ["app/calmoon.js"]
+    }
+  ]
+}
