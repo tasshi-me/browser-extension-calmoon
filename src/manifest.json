@@ -26,7 +26,7 @@
         "https://*.cybozu-dev.cn/g/schedule/participate*",
         "https://*.cybozu-dev.cn/g/schedule/leave*"
       ],
-      "js": ["app/calmoon.js"],
+      "js": ["js/main.js"],
       "run_at": "document_end"
     }
   ]
