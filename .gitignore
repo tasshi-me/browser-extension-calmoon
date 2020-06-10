@@ -19,7 +19,3 @@ dev-build/
 
 # misc
 **/.DS_Store
-**/.vs
-**/.vscode
-!**/.vscode/tasks.json
-.idea
