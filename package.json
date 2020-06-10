@@ -14,7 +14,8 @@
     "package": "yarn build && web-ext build --source-dir ./build/ --overwrite-dest",
     "lint": "eslint",
     "lint:fix": "eslint --fix",
-    "test": "yarn jest --passWithNoTests"
+    "test": "yarn jest --passWithNoTests",
+    "conv-icons": "$PWD/tools/convert-icons.sh"
   },
   "devDependencies": {
     "@types/copy-webpack-plugin": "^6.0.0",
