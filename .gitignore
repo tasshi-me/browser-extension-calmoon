@@ -16,6 +16,7 @@ coverage/
 # output
 build/
 dev-build/
+web-ext-artifacts/
 
 # misc
 **/.DS_Store
