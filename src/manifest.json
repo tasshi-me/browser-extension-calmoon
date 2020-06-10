@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "Calmoon for Garoon",
-  "version": "1.0",
+  "version": "version will be mapped from package.json",
 
   "short_name": "calmoon",
   "description": "Disable \"Notify this update\" when you join/leave event on Garoon https://garoon.cybozu.co.jp/",

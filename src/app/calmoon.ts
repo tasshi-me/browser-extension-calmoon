@@ -1,3 +1,5 @@
+import "../manifest.json";
+
 const isNotifyEl = document.getElementById("is_notify") as
   | HTMLInputElement
   | undefined;

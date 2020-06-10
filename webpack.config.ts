@@ -36,10 +36,6 @@ module.exports = (
       new CopyPlugin({
         patterns: [
           {
-            from: "src/manifest.json",
-            to: "./manifest.json",
-          },
-          {
             from: "src/icons",
             to: "./icons",
           },
@@ -52,6 +48,25 @@ module.exports = (
           test: /\.tsx?$/,
           loader: "ts-loader",
           exclude: /node_modules/,
+        },
+        {
+          test: /\/manifest\.json$/,
+          use: [
+            {
+              loader: "file-loader",
+              options: {
+                name: "[name].[ext]",
+              },
+            },
+            "extract-loader",
+            {
+              loader: "chrome-manifest-loader",
+              options: {
+                mapVersion: true,
+              },
+            },
+          ],
+          type: "javascript/auto",
         },
       ],
     },
