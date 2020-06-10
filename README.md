@@ -4,6 +4,21 @@ Disable "Notify this update" when you join/leave event on [Garoon](https://garoo
 
 <!-- ## Recent updates -->
 
+<!-- ## Usage -->
+
+## Development
+
+```
+# setup
+$ yarn
+
+# development build
+$ yarn start
+
+# production build
+$ yarn build
+```
+
 ## Lisence
 
 This project is licensed under the [MIT license.](./LICENSE)
