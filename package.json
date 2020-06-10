@@ -7,8 +7,9 @@
   "author": "Masaharu TASHIRO <masatsr.kit@gmail.com>",
   "license": "MIT",
   "scripts": {
+    "prestart": "rimraf dev-build",
     "prebuild": "rimraf build",
-    "start": "webpack-dev-server --mode development --hot",
+    "start": "webpack --mode development",
     "build": "webpack --mode production",
     "tslint": "eslint --project ./  --fix",
     "test": "yarn jest --passWithNoTests"

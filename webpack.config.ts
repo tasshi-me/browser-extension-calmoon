@@ -6,11 +6,11 @@ module.exports = (
   env: "production" | "development" | "none" | undefined,
   argv: { mode: "production" | "development" }
 ): Configuration => {
-  const mode = argv.mode || "development",
-    dist =
-      mode === "development"
-        ? path.resolve(__dirname, "dev-build")
-        : path.resolve(__dirname, "build");
+  const mode = argv.mode || "development";
+  const dist =
+    mode === "development"
+      ? path.resolve(__dirname, "dev-build")
+      : path.resolve(__dirname, "build");
 
   return {
     mode,
@@ -30,11 +30,8 @@ module.exports = (
         images: path.resolve(__dirname, "images/"),
       },
     },
+    watch: mode === "development",
     devtool: mode === "development" ? "inline-source-map" : false,
-    devServer: {
-      contentBase: dist,
-      port: 3000,
-    },
     plugins: [
       new CopyPlugin({
         patterns: [
