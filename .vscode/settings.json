@@ -9,6 +9,10 @@
     "source.fixAll": true
   },
   "editor.formatOnSave": true,
+  "[yml]": {
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2
+  },
   "editor.rulers": [100],
   "eslint.validate": ["javascript", "typescript"],
   "prettier.disableLanguages": ["javascript", "typescript"],
