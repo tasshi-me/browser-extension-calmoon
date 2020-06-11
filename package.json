@@ -15,8 +15,7 @@
     "lint": "eslint",
     "lint:fix": "eslint --fix",
     "test": "yarn jest --passWithNoTests",
-    "conv-icons": "$PWD/tools/convert-icons.sh",
-    "release-note:new": "$PWD/tools/generate-release-note.sh"
+    "conv-icons": "$PWD/tools/convert-icons.sh"
   },
   "devDependencies": {
     "@types/copy-webpack-plugin": "^6.0.0",
