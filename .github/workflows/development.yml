@@ -1,0 +1,27 @@
+name: Development
+
+on:
+  push:
+    branches-ignore:
+      - "master"
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Check node and yarn version
+        run: |
+          echo "node: `node -v`"
+          echo "yarn: v`yarn -v`"
+      - name: Install dependences
+        run: yarn install
+      - name: Lint project
+        run: yarn lint
+      - name: Test project
+        run: yarn run test
+      - name: Build package
+        run: yarn run build
+      - name: Test built package
+        run: yarn run web-ext lint --source-dir ./build/
