@@ -4,10 +4,13 @@ on:
   push:
     branches:
       - "master"
+      - "feature/github-actions"
 
 jobs:
   test:
     runs-on: ubuntu-latest
+    outputs:
+      pkg_version: ${{ steps.set_pkg_version.outputs.pkg_version }}
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -27,12 +30,11 @@ jobs:
         run: yarn run web-ext lint --source-dir ./build/
       - name: Package artifacts
         run: yarn run package
-      - name: Get package version
-        run: echo ::set-env name=pkg_version::$(jq -r '.version' ./package.json)
-      - name: Export package version to file
-        run: echo ${{ env.pkg_version }} > ./web-ext-artifacts/.pkg-version
+      - name: Set package version to outputs
+        id: set_pkg_version
+        run: echo ::set-output name=pkg_version::$(jq -r '.version' ./package.json)
       - name: Export release note
-        run: cp ./docs/release-notes/${{ env.pkg_version }}.md ./web-ext-artifacts/release-note-${{ env.pkg_version }}.md
+        run: cp ./docs/release-notes/${{ steps.set_pkg_version.outputs.pkg_version }}.md ./web-ext-artifacts/release-note-${{ steps.set_pkg_version.outputs.pkg_version }}.md
       - name: Upload web-ext-artifacts
         uses: actions/upload-artifact@v2
         with:
@@ -46,18 +48,16 @@ jobs:
         uses: actions/download-artifact@v1
         with:
           name: artifacts-${{ github.sha }}
-      - name: Set package version
-        run: echo ::set-env name=pkg_version::$(cat ./artifacts-${{ github.sha }}/.pkg-version)
       - name: Set release note (escaped)
-        run: echo ::set-env name=release_note_escaped::$(cat ./artifacts-${{ github.sha }}/release-note-${{ env.pkg_version }}.md| tr '\n' '\a' | sed -r -e 's/\a/%0A/g')
+        run: echo ::set-env name=release_note_escaped::$(cat ./artifacts-${{ github.sha }}/release-note-${{ needs.test.outputs.pkg_version }}.md| tr '\n' '\a' | sed -r -e 's/\a/%0A/g')
       - name: Create Release
         id: create_release
         uses: actions/create-release@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
         with:
-          tag_name: v${{ env.pkg_version }}
-          release_name: Release v${{ env.pkg_version }}
+          tag_name: v${{ needs.test.outputs.pkg_version }}
+          release_name: Release v${{ needs.test.outputs.pkg_version }}
           body: ${{ env.release_note_escaped }}
           draft: true
           prerelease: false
@@ -68,8 +68,8 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./artifacts-${{ github.sha }}/calmoon_for_garoon-${{ env.pkg_version }}.zip
-          asset_name: calmoon_for_garoon-${{ env.pkg_version }}.zip
+          asset_path: ./artifacts-${{ github.sha }}/calmoon_for_garoon-${{ needs.test.outputs.pkg_version }}.zip
+          asset_name: calmoon_for_garoon-${{ needs.test.outputs.pkg_version }}.zip
           asset_content_type: application/zip
       - name: Upload Release Note
         id: upload-release-note
@@ -78,6 +78,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./artifacts-${{ github.sha }}/release-note-${{ env.pkg_version }}.md
-          asset_name: release-note-${{ env.pkg_version }}.md
+          asset_path: ./artifacts-${{ github.sha }}/release-note-${{ needs.test.outputs.pkg_version }}.md
+          asset_name: release-note-${{ needs.test.outputs.pkg_version }}.md
           asset_content_type: text/markdown
