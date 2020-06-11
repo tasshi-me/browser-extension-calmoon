@@ -1,0 +1,24 @@
+name: TestVariables
+
+on: [push]
+
+jobs:
+  sets:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set hoge on env
+        run: echo ::set-env name=hoge_on_env::hogefuga
+      - name: Set fuga on output
+        run: echo ::set-output name=fuga_on_output::fugahoge
+  hoge:
+    needs: sets
+    runs-on: ubuntu-latest
+    steps:
+      - name: Echo hoge
+        run: echo ${{ env.hoge_on_env }}
+  huga:
+    needs: sets
+    runs-on: ubuntu-latest
+    steps:
+      - name: Echo fuga
+        run: echo ${{ output.fuga_on_output }}
