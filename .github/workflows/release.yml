@@ -1,0 +1,83 @@
+name: Production
+
+on:
+  push:
+    branches:
+      - "master"
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Check node and yarn version
+        run: |
+          echo "node: `node -v`"
+          echo "yarn: v`yarn -v`"
+      - name: Install dependences
+        run: yarn install
+      - name: Lint project
+        run: yarn lint
+      - name: Test project
+        run: yarn run test
+      - name: Build package
+        run: yarn run build
+      - name: Test built package
+        run: yarn run web-ext lint --source-dir ./build/
+      - name: Package artifacts
+        run: yarn run package
+      - name: Get package version
+        run: echo ::set-env name=pkg_version::$(jq -r '.version' ./package.json)
+      - name: Export package version to file
+        run: echo ${{ env.pkg_version }} > ./web-ext-artifacts/.pkg-version
+      - name: Export release note
+        run: cp ./docs/release-notes/${{ env.pkg_version }}.md ./web-ext-artifacts/release-note-${{ env.pkg_version }}.md
+      - name: Upload web-ext-artifacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: artifacts-${{ github.sha }}
+          path: ./web-ext-artifacts/
+  release:
+    needs: test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download artifacts
+        uses: actions/download-artifact@v1
+        with:
+          name: artifacts-${{ github.sha }}
+      - name: Set package version
+        run: echo ::set-env name=pkg_version::$(cat ./artifacts-${{ github.sha }}/.pkg-version)
+      - name: Set release note (escaped)
+        run: echo ::set-env name=release_note_escaped::$(cat ./artifacts-${{ github.sha }}/release-note-${{ env.pkg_version }}.md| tr '\n' '\a' | sed -r -e 's/\a/%0A/g')
+      - name: Create Release
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
+        with:
+          tag_name: v${{ env.pkg_version }}
+          release_name: Release v${{ env.pkg_version }}
+          body: ${{ env.release_note_escaped }}
+          draft: true
+          prerelease: false
+      - name: Upload Release Artifacts
+        id: upload-release-artifacts
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: ./artifacts-${{ github.sha }}/calmoon_for_garoon-${{ env.pkg_version }}.zip
+          asset_name: calmoon_for_garoon-${{ env.pkg_version }}.zip
+          asset_content_type: application/zip
+      - name: Upload Release Note
+        id: upload-release-note
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: ./artifacts-${{ github.sha }}/release-note-${{ env.pkg_version }}.md
+          asset_name: release-note-${{ env.pkg_version }}.md
+          asset_content_type: text/markdown
