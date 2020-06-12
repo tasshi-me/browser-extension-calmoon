@@ -12,7 +12,7 @@ Please download from [release page](https://github.com/mshrtsr/browser-extension
 
 ## Screen shot
 
-![Screen shot](docs/screen-shots/ss-1280x670.png)
+<img src="docs/screen-shots/ss-1280x670.png" alt="Screen shot" width="60%" />
 
 ## Recent updates
 
