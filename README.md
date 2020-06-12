@@ -4,7 +4,19 @@
 
 Disable "Notify this update" when you join/leave event on [Garoon](https://garoon.cybozu.co.jp/) :shushing_face:
 
-<!-- ## Recent updates -->
+## Download
+> Download from [Chrome Web Store](https://chrome.google.com/webstore/) or [Firefox Browser ADD-ONS](https://addons.mozilla.org/ja/firefox/) is coming soon!
+
+Please download from [release page](https://github.com/mshrtsr/browser-extension-calmoon/releases).
+
+## Recent updates
+
+### Release 1.0.0 :tada:
+
+#### Changes in this Release
+
+- First release of Calmoon
+- This extension disable "Notify this update" when you join/leave event on [Garoon](https://garoon.cybozu.co.jp/)
 
 <!-- ## Usage -->
 
