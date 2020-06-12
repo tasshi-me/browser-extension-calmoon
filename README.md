@@ -16,7 +16,7 @@ Please download from [release page](https://github.com/mshrtsr/browser-extension
 
 ## Recent updates
 
-### Release 1.0.0 :tada:
+### Release v1.0.0 :tada:
 
 #### Changes in this Release
 
