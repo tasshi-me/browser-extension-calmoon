@@ -1,6 +1,6 @@
 <img src="src/icons/icon-128.png" alt="icon of calmoon" align="right" />
 
-# Calmoon for Garoon
+# Calmoon for Garoon ![Production](https://github.com/mshrtsr/browser-extension-calmoon/workflows/Production/badge.svg) ![Development](https://github.com/mshrtsr/browser-extension-calmoon/workflows/Development/badge.svg)
 
 Disable "Notify this update" when you join/leave event on [Garoon](https://garoon.cybozu.co.jp/) :shushing_face:
 
