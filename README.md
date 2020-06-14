@@ -4,11 +4,13 @@
 
 Disable "Notify this update" when you join/leave event on [Garoon](https://garoon.cybozu.co.jp/) :shushing_face:
 
-## Download
+## Install
 
-> Download from [Chrome Web Store](https://chrome.google.com/webstore/) or [Firefox Browser ADD-ONS](https://addons.mozilla.org/ja/firefox/) is coming soon!
+| Chrome                                                                                                                                                                          | Firefox                                                                                                                    |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| [![Install to Chrome](docs/resources/ChromeWebStore_BadgeWBorder_v2_206x58.png)](https://chrome.google.com/webstore/detail/calmoon-for-garoon/adpfpbogonofdljjmipfpheknmadjdck) | [![Install to Firefox](docs/resources/get-the-addon.png)](https://addons.mozilla.org/ja/firefox/addon/calmoon-for-garoon/) |  |
 
-Please download from [release page](https://github.com/mshrtsr/browser-extension-calmoon/releases).
+If you need a zip file, please download from [release page](https://github.com/mshrtsr/browser-extension-calmoon/releases).
 
 ## Screen shot
 
