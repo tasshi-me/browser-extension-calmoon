@@ -14,7 +14,7 @@ If you need a zip file, please download from [release page](https://github.com/m
 
 ## Screen shot
 
-<img src="docs/screen-shots/ss-1280x670.png" alt="Screen shot" width="60%" />
+<img src="docs/screen-shots/en/ss-1280x670.png" alt="Screen shot" width="60%" />
 
 ## Recent updates
 
