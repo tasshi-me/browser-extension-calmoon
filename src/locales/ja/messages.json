@@ -10,7 +10,7 @@
   },
 
   "extensionDescription": {
-    "message": "Garoonの予定参加・不参加画面の「この更新を通知する」をデフォルトでオフにします。 Garoon: https://garoon.cybozu.co.jp/",
+    "message": "Garoonの予定に参加/抜けるときの「この更新を通知する」をデフォルトでオフにします。 Garoon: https://garoon.cybozu.co.jp/",
     "description": "Description of the extension."
   }
 }
