@@ -4,6 +4,8 @@
 
 Disable "Notify this update" when you join/leave event on [Garoon](https://garoon.cybozu.co.jp/) :shushing_face:
 
+For Japanese readers: [README_ja.md](README_ja.md)
+
 ## Install
 
 | Chrome                                                                                                                                                                          | Firefox                                                                                                                    |
