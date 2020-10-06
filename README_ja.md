@@ -1,6 +1,6 @@
-<img src="src/icons/icon-128.png" alt="通知とばーんのアイコン" align="right" />
+<img src="src/icons/icon-128.png" alt="通知オフ太郎のアイコン" align="right" />
 
-# 通知とばーん for Garoon ![Production](https://github.com/mshrtsr/browser-extension-calmoon/workflows/Production/badge.svg) ![Development](https://github.com/mshrtsr/browser-extension-calmoon/workflows/Development/badge.svg)
+# 通知オフ太郎 for Garoon ![Production](https://github.com/mshrtsr/browser-extension-calmoon/workflows/Production/badge.svg) ![Development](https://github.com/mshrtsr/browser-extension-calmoon/workflows/Development/badge.svg)
 
 [Garoon](https://garoon.cybozu.co.jp/) の予定に参加/抜けるときの「この更新を通知する」をデフォルトでオフにします :shushing_face:
 
@@ -24,7 +24,7 @@ ZIP ファイルが必要な方は[リリースノート](https://github.com/msh
 
 #### 変更点
 
-- 通知とばーん（英語名：Calmoon）をリリースしました。
+- 通知オフ太郎（英語名：Calmoon）をリリースしました。
 
 ## ライセンス
 

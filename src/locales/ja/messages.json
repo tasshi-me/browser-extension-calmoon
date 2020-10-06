@@ -1,11 +1,11 @@
 {
   "extensionName": {
-    "message": "通知とばーん for Garoon（仮）",
+    "message": "通知オフ太郎 for Garoon",
     "description": "Name of the extension."
   },
 
   "extensionShortName": {
-    "message": "通知とばーん（仮）",
+    "message": "通知オフ太郎",
     "description": "Short name of the extension."
   },
 
