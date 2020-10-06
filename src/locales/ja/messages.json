@@ -1,0 +1,16 @@
+{
+  "extensionName": {
+    "message": "通知オフ太郎 for Garoon",
+    "description": "Name of the extension."
+  },
+
+  "extensionShortName": {
+    "message": "通知オフ太郎",
+    "description": "Short name of the extension."
+  },
+
+  "extensionDescription": {
+    "message": "Garoonの予定に参加/抜けるときの「この更新を通知する」をデフォルトでオフにします。 Garoon: https://garoon.cybozu.co.jp/",
+    "description": "Description of the extension."
+  }
+}
