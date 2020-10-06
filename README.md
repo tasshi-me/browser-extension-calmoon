@@ -4,6 +4,8 @@
 
 Disable "Notify this update" when you join/leave event on [Garoon](https://garoon.cybozu.co.jp/) :shushing_face:
 
+For Japanese readers: [README_ja.md](README_ja.md)
+
 ## Install
 
 | Chrome                                                                                                                                                                          | Firefox                                                                                                                    |
@@ -14,9 +16,15 @@ If you need a zip file, please download from [release page](https://github.com/m
 
 ## Screen shot
 
-<img src="docs/screen-shots/ss-1280x670.png" alt="Screen shot" width="60%" />
+<img src="docs/screen-shots/en/ss-1280x670.png" alt="Screen shot" width="60%" />
 
 ## Recent updates
+
+# Release v1.1.0 :tada:
+
+## Changes in this Release
+
+- Add Japanese localization
 
 ### Release v1.0.0 :tada:
 

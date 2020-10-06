@@ -1,6 +1,8 @@
 import CopyPlugin from "copy-webpack-plugin";
 import path from "path";
 import { Configuration } from "webpack";
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const MinifyJSONWebpackPlugin = require("minify-json-webpack-plugin");
 
 module.exports = (
   env: "production" | "development" | "none" | undefined,
@@ -33,11 +35,16 @@ module.exports = (
     watch: mode === "development",
     devtool: mode === "development" ? "inline-source-map" : false,
     plugins: [
+      new MinifyJSONWebpackPlugin(),
       new CopyPlugin({
         patterns: [
           {
             from: "src/icons",
             to: "./icons",
+          },
+          {
+            from: "src/locales",
+            to: "./_locales",
           },
         ],
       }),
