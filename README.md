@@ -20,6 +20,12 @@ If you need a zip file, please download from [release page](https://github.com/m
 
 ## Recent updates
 
+# Release v1.1.0 :tada:
+
+## Changes in this Release
+
+- Add Japanese localization
+
 ### Release v1.0.0 :tada:
 
 #### Changes in this Release
