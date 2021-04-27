@@ -19,7 +19,7 @@
     "release-note:new": "$PWD/tools/generate-release-note.sh"
   },
   "devDependencies": {
-    "@types/copy-webpack-plugin": "^6.0.0",
+    "@types/copy-webpack-plugin": "^8.0.0",
     "@types/jest": "^26.0.0",
     "@types/webpack": "^4.41.17",
     "@typescript-eslint/eslint-plugin": "^4.0.0",
