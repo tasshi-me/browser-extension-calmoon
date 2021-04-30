@@ -1,0 +1,32 @@
+version: 2
+updates:
+- package-ecosystem: npm
+  directory: "/"
+  schedule:
+    interval: daily
+    time: "20:00"
+  open-pull-requests-limit: 10
+  target-branch: develop
+  reviewers:
+  - mshrtsr
+  assignees:
+  - mshrtsr
+  ignore:
+  - dependency-name: ts-loader
+    versions:
+    - 9.0.0
+    - 9.0.2
+    - 9.1.0
+  - dependency-name: "@types/webpack"
+    versions:
+    - 5.0.0
+  - dependency-name: copy-webpack-plugin
+    versions:
+    - 8.0.0
+    - 8.1.0
+  - dependency-name: web-ext
+    versions:
+    - 6.0.0
+  - dependency-name: eslint-config-prettier
+    versions:
+    - 8.0.0
