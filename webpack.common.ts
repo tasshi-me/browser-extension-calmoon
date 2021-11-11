@@ -10,7 +10,8 @@ const JsonMinimizerWebpackPlugin = require("json-minimizer-webpack-plugin");
 const config: Configuration = {
   mode: "production",
   entry: {
-    main: "src/app/calmoon.ts",
+    "prevent-send-notification": "src/app/prevent-send-notification.ts",
+    "auto-read-notifications": "src/app/auto-read-notifications.ts",
   },
 
   output: {
