@@ -2,7 +2,7 @@
 import CopyPlugin from "copy-webpack-plugin";
 import path from "path";
 // eslint-disable-next-line node/no-unpublished-import
-import { Configuration } from "webpack";
+import { Configuration, ProvidePlugin } from "webpack";
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 // eslint-disable-next-line node/no-unpublished-require
 const JsonMinimizerWebpackPlugin = require("json-minimizer-webpack-plugin");
@@ -24,10 +24,18 @@ const config: Configuration = {
       src: path.resolve(__dirname, "src/"),
       images: path.resolve(__dirname, "images/"),
     },
+    fallback: {
+      stream: require.resolve("stream-browserify"),
+      buffer: require.resolve("buffer/"),
+      timers: require.resolve("timers-browserify"),
+    },
   },
   watch: false,
   devtool: false,
   plugins: [
+    new ProvidePlugin({
+      process: require.resolve("process/browser"),
+    }),
     new CopyPlugin({
       patterns: [
         {
