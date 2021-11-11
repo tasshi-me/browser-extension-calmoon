@@ -13,7 +13,7 @@ jobs:
       tag_exists: ${{ steps.check_tag_exists.outputs.tag_exists }}
     steps:
       - name: Checkout
-        uses: actions/checkout@v1
+        uses: actions/checkout@v2
       - name: Check node and yarn version
         run: |
           echo "node: `node -v`"
