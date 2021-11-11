@@ -1,7 +1,10 @@
+// eslint-disable-next-line node/no-unpublished-import
 import CopyPlugin from "copy-webpack-plugin";
 import path from "path";
+// eslint-disable-next-line node/no-unpublished-import
 import { Configuration } from "webpack";
 // eslint-disable-next-line @typescript-eslint/no-var-requires
+// eslint-disable-next-line node/no-unpublished-require
 const JsonMinimizerWebpackPlugin = require("json-minimizer-webpack-plugin");
 
 const config: Configuration = {

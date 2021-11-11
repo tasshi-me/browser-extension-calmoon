@@ -1,4 +1,6 @@
+// eslint-disable-next-line node/no-unpublished-import
 import { Configuration } from "webpack";
+// eslint-disable-next-line node/no-unpublished-import
 import { merge } from "webpack-merge";
 import common from "./webpack.common";
 
