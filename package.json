@@ -30,7 +30,7 @@
     "@cybozu/eslint-config": "^15.0.0",
     "@tsconfig/recommended": "^1.0.1",
     "@types/copy-webpack-plugin": "^8.0.1",
-    "@types/jest": "^27.0.2",
+    "@types/jest": "^27.0.3",
     "@types/webpack": "^5.28.0",
     "chrome-manifest-loader": "^0.3.0",
     "copy-webpack-plugin": "^9.1.0",
