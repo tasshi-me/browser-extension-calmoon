@@ -1,32 +1,49 @@
 import "../manifest.json";
+// eslint-disable-next-line node/no-unpublished-import
 import { GaroonRestAPIClient } from "@miyajan/garoon-rest";
 import GaroonSoapAPIClient from "garoon-soap";
 import { NotificationIdType } from "garoon-soap/dist/type/notification";
+import { SyncStorage, LocalStorage } from "../lib/storage-util";
 
-const garoonRestApiClient = new GaroonRestAPIClient();
-const garoonSoapAPIClient = new GaroonSoapAPIClient(
-  garoonRestApiClient.getBaseUrl()
-);
-
-type BaseNotificationItems = ReturnType<
+type NotificationItems = ReturnType<
   GaroonRestAPIClient["notification"]["getItems"]
 > extends Promise<infer T>
   ? T
   : unknown;
-type NotificationItems = Omit<BaseNotificationItems, "items"> & {
+type NotificationItemsWithNotificationKey = Omit<NotificationItems, "items"> & {
   items: Array<
-    (BaseNotificationItems["items"] extends Array<infer U> ? U : unknown) & {
+    (NotificationItems["items"] extends Array<infer U> ? U : unknown) & {
       notificationKey: string;
     }
   >;
 };
 
 (async () => {
+  const garoonRestApiClient = new GaroonRestAPIClient();
+  const garoonSoapAPIClient = new GaroonSoapAPIClient(
+    garoonRestApiClient.getBaseUrl()
+  );
+
+  const { enableAutoRead, autoReadInterval } = await SyncStorage.getOptions();
+  const lastAutoReadTimestamp = await LocalStorage.getLastAutoReadTimestamp();
+  // console.log(enableAutoRead);
+  // console.log(autoReadInterval);
+  // console.log(lastAutoReadTimestamp);
+
+  if (!enableAutoRead) {
+    return;
+  }
+  const currentTimeStamp = Date.now();
+  if (lastAutoReadTimestamp + autoReadInterval * 1000 * 60 > currentTimeStamp) {
+    // console.log("auto read skipped");
+    return;
+  }
+
   const requestToken = await garoonSoapAPIClient.util.getRequestToken();
   garoonSoapAPIClient.setRequestToken(requestToken);
 
   const notifications =
-    (await garoonRestApiClient.notification.getItems()) as NotificationItems;
+    (await garoonRestApiClient.notification.getItems()) as NotificationItemsWithNotificationKey;
   const filteredNotifications = notifications.items.filter((notification) => {
     // Notification of schedule modification with empty body
     if (
@@ -51,4 +68,6 @@ type NotificationItems = Omit<BaseNotificationItems, "items"> & {
       notificationIds
     );
   }
+
+  await LocalStorage.setLastAutoReadTimestamp(Date.now());
 })();
