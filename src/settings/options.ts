@@ -1,7 +1,7 @@
 import { SyncStorage } from "../lib/storage-util";
 import "./options.css";
 
-console.log("options.js loaded!!!");
+// console.log("options.js loaded!!!");
 
 const main = async () => {
   await restoreOptions();
@@ -36,7 +36,8 @@ const main = async () => {
 };
 
 const saveOptions = async () => {
-  console.log("Save options!!");
+  // console.log("Save options!!");
+
   const enableAutoReadEl = document.querySelector<HTMLInputElement>(
     "input#enable-auto-read"
   );
@@ -59,7 +60,7 @@ const saveOptions = async () => {
 };
 
 const restoreOptions = async () => {
-  console.log("Restore options!!");
+  // console.log("Restore options!!");
 
   const { enableAutoRead, autoReadInterval } = await SyncStorage.getOptions();
   const enableAutoReadEl = document.querySelector<HTMLInputElement>(
