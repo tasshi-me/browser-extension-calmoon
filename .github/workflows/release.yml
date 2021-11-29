@@ -25,11 +25,13 @@ jobs:
       - name: Test project
         run: yarn run test
       - name: Build package
-        run: yarn run build
-      - name: Test built package
-        run: yarn run web-ext lint --source-dir ./build/
+        run: yarn run build:all
+      - name: Test built package (chrome)
+        run: yarn run web-ext lint --source-dir ./build/chrome
+      - name: Test built package (firefox)
+        run: yarn run web-ext lint --source-dir ./build/firefox
       - name: Package artifacts
-        run: yarn run package
+        run: yarn run package:all
       - name: Set package version to outputs
         id: set_pkg_version
         run: echo ::set-output name=pkg_version::$(jq -r '.version' ./package.json)
@@ -73,15 +75,25 @@ jobs:
           body: ${{ env.release_note_escaped }}
           draft: true
           prerelease: false
-      - name: Upload Release Artifacts
+      - name: Upload Release Artifacts (Chrome)
         id: upload-release-artifacts
         uses: actions/upload-release-asset@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./artifacts-${{ github.sha }}/calmoon_for_garoon-${{ needs.test.outputs.pkg_version }}.zip
-          asset_name: calmoon_for_garoon-${{ needs.test.outputs.pkg_version }}.zip
+          asset_path: ./artifacts-${{ github.sha }}/chrome/calmoon_for_garoon-${{ needs.test.outputs.pkg_version }}.zip
+          asset_name: calmoon_for_garoon-${{ needs.test.outputs.pkg_version }}-chrome.zip
+          asset_content_type: application/zip
+      - name: Upload Release Artifacts (Firefox)
+        id: upload-release-artifacts
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: ./artifacts-${{ github.sha }}/firefox/calmoon_for_garoon-${{ needs.test.outputs.pkg_version }}.zip
+          asset_name: calmoon_for_garoon-${{ needs.test.outputs.pkg_version }}-firefox.zip
           asset_content_type: application/zip
       - name: Upload Release Note
         id: upload-release-note
