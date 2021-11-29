@@ -18,7 +18,7 @@ export const SyncStorage = {
     };
   },
 
-  setOptions: async (options: Partial<Options>) => {
+  setOptions: async (options: Partial<Options>): Promise<void> => {
     await browser.storage.sync.set(options);
   },
 };
@@ -29,7 +29,9 @@ export const LocalStorage = {
     return record.lastAutoReadTimestamp ?? 0;
   },
 
-  setLastAutoReadTimestamp: async (lastAutoReadTimestamp: number) => {
+  setLastAutoReadTimestamp: async (
+    lastAutoReadTimestamp: number
+  ): Promise<void> => {
     await browser.storage.local.set({
       lastAutoReadTimestamp,
     });

@@ -26,9 +26,9 @@ jobs:
         run: yarn run test
       - name: Build package
         run: yarn run build:all
-      - name: Test built package (chrome)
+      - name: Test built package (Chrome)
         run: yarn run web-ext lint --source-dir ./build/chrome
-      - name: Test built package (firefox)
+      - name: Test built package (Firefox)
         run: yarn run web-ext lint --source-dir ./build/firefox
       - name: Package artifacts
         run: yarn run package:all
