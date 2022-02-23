@@ -39,7 +39,7 @@
     "@cybozu/eslint-config": "^17.0.0",
     "@tsconfig/recommended": "^1.0.1",
     "@types/copy-webpack-plugin": "^8.0.1",
-    "@types/jest": "^27.4.0",
+    "@types/jest": "^27.4.1",
     "@types/mini-css-extract-plugin": "^2.5.0",
     "@types/webextension-polyfill": "^0.8.2",
     "@types/webpack": "^5.28.0",
