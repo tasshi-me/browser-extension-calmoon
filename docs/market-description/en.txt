@@ -1,4 +1,7 @@
-This extension disable "Notify this update" when you join/leave event on Garoon 🤫
-https://github.com/mshrtsr/browser-extension-calmoon
+This extension make you free from sending/receiving notifications on Garoon🤫
+- Disable "Notify this update" when you join/leave event on Garoon 
+- Auto-read uninformative notifications
+
+More details: https://github.com/mshrtsr/browser-extension-calmoon
 
 This OSS is my own personal work and does not have any relationship with Cybozu Inc. or any other organization which I belong to.

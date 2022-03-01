@@ -2,7 +2,10 @@
 
 # 通知オフ太郎 for Garoon ![Production](https://github.com/mshrtsr/browser-extension-calmoon/workflows/Production/badge.svg) ![Development](https://github.com/mshrtsr/browser-extension-calmoon/workflows/Development/badge.svg)
 
-[Garoon](https://garoon.cybozu.co.jp/) の予定に参加/抜けるときの「この更新を通知する」をデフォルトでオフにします :shushing_face:
+あなたを[Garoon](https://garoon.cybozu.co.jp/)の不要な通知を送る/受け取ることから解放します :shushing_face:
+
+- 予定に参加/抜けるときの「この更新を通知する」をデフォルトでオフにします
+- 不要な通知を自動で既読にして本来見るべき通知に集中できるようにします
 
 For English readers: [README.md](README.md)
 

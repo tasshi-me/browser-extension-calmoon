@@ -2,15 +2,18 @@
 
 # Calmoon for Garoon ![Production](https://github.com/mshrtsr/browser-extension-calmoon/workflows/Production/badge.svg) ![Development](https://github.com/mshrtsr/browser-extension-calmoon/workflows/Development/badge.svg)
 
-Disable "Notify this update" when you join/leave event on [Garoon](https://garoon.cybozu.co.jp/) :shushing_face:
+Make you free from sending/receiving notifications on [Garoon](https://garoon.cybozu.co.jp/) :shushing_face:
+
+- Disable "Notify this update" when you join/leave event
+- Auto-read uninformative notifications
 
 For Japanese readers: [README_ja.md](README_ja.md)
 
 ## Install
 
 | Chrome                                                                                                                                                                          | Firefox                                                                                                                    |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | --- |
-| [![Install to Chrome](docs/resources/ChromeWebStore_BadgeWBorder_v2_206x58.png)](https://chrome.google.com/webstore/detail/calmoon-for-garoon/adpfpbogonofdljjmipfpheknmadjdck) | [![Install to Firefox](docs/resources/get-the-addon.png)](https://addons.mozilla.org/ja/firefox/addon/calmoon-for-garoon/) |     |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| [![Install to Chrome](docs/resources/ChromeWebStore_BadgeWBorder_v2_206x58.png)](https://chrome.google.com/webstore/detail/calmoon-for-garoon/adpfpbogonofdljjmipfpheknmadjdck) | [![Install to Firefox](docs/resources/get-the-addon.png)](https://addons.mozilla.org/ja/firefox/addon/calmoon-for-garoon/) |
 
 If you need a zip file, please download from [release page](https://github.com/mshrtsr/browser-extension-calmoon/releases).
 
