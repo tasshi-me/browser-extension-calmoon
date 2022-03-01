@@ -63,7 +63,7 @@ jobs:
         with:
           name: artifacts-${{ github.sha }}
       - name: Set release note (escaped)
-        run: echo ::set-env name=release_note_escaped::$(cat ./artifacts-${{ github.sha }}/release-note-${{ needs.test.outputs.pkg_version }}.md| tr '\n' '\a' | sed -r -e 's/\a/%0A/g')
+        run: echo "release_note_escaped=$(cat ./release-note-${{ needs.test.outputs.pkg_version }}.md| tr '\n' '\a' | sed -r -e 's/\a/%0A/g')" >> $GITHUB_ENV
       - name: Create Release
         id: create_release
         uses: actions/create-release@v1
@@ -82,7 +82,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./artifacts-${{ github.sha }}/chrome/calmoon_for_garoon-${{ needs.test.outputs.pkg_version }}.zip
+          asset_path: ./chrome/calmoon_for_garoon-${{ needs.test.outputs.pkg_version }}.zip
           asset_name: calmoon_for_garoon-${{ needs.test.outputs.pkg_version }}-chrome.zip
           asset_content_type: application/zip
       - name: Upload Release Artifacts (Firefox)
@@ -92,7 +92,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./artifacts-${{ github.sha }}/firefox/calmoon_for_garoon-${{ needs.test.outputs.pkg_version }}.zip
+          asset_path: ./firefox/calmoon_for_garoon-${{ needs.test.outputs.pkg_version }}.zip
           asset_name: calmoon_for_garoon-${{ needs.test.outputs.pkg_version }}-firefox.zip
           asset_content_type: application/zip
       - name: Upload Release Note
@@ -102,6 +102,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./artifacts-${{ github.sha }}/release-note-${{ needs.test.outputs.pkg_version }}.md
+          asset_path: ./release-note-${{ needs.test.outputs.pkg_version }}.md
           asset_name: release-note-${{ needs.test.outputs.pkg_version }}.md
           asset_content_type: text/markdown
