@@ -10,7 +10,7 @@ For English readers: [README.md](README.md)
 
 | Chrome                                                                                                                                                                                 | Firefox                                                                                                                           |
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
-| [![Chromeにインストールする](docs/resources/ChromeWebStore_BadgeWBorder_v2_206x58.png)](https://chrome.google.com/webstore/detail/calmoon-for-garoon/adpfpbogonofdljjmipfpheknmadjdck) | [![Firefoxにインストールする](docs/resources/get-the-addon.png)](https://addons.mozilla.org/ja/firefox/addon/calmoon-for-garoon/) |  |
+| [![Chromeにインストールする](docs/resources/ChromeWebStore_BadgeWBorder_v2_206x58.png)](https://chrome.google.com/webstore/detail/calmoon-for-garoon/adpfpbogonofdljjmipfpheknmadjdck) | [![Firefoxにインストールする](docs/resources/get-the-addon.png)](https://addons.mozilla.org/ja/firefox/addon/calmoon-for-garoon/) |
 
 ZIP ファイルが必要な方は[リリースノート](https://github.com/mshrtsr/browser-extension-calmoon/releases)のページからダウンロードしてください。
 
@@ -18,7 +18,44 @@ ZIP ファイルが必要な方は[リリースノート](https://github.com/msh
 
 <img src="docs/screen-shots/ja/ss-1280x670.png" alt="スクリーンショット" width="60%" />
 
+## 使い方
+
+### 参加/抜けるときの通知をオフにする機能
+
+Garoon の予定への参加または予定を抜ける画面において、「この更新を通知する」というチェックボックスが自動でオフになる機能です。  
+通知オフ太郎をインストールすると自動で有効になります。
+
+### [NEW!] 不要な通知を自動で既読にする機能
+
+Garoon で受け取る通知のうち、以下のルールに当てはまる通知を自動で既読にする機能です。
+
+- 予定変更通知のうち、通知本文が空のもの
+
+この機能を利用するには拡張機能の設定画面から機能を有効化してください
+
+- Chrome: 拡張機能(["`chrome://extensions/`"](chrome://extensions/))->「通知オフ太郎」->「詳細」->「拡張機能のオプション」
+- Firefox: アドオンマネージャー(["`about:addons`"](about:addons))->「通知オフ太郎」->「設定」
+
+| オプション名                          | 説明                     | 初期値  |
+| ------------------------------------- | ------------------------ | ------- |
+| Auto-read uninformative notifications | 機能を有効化するかどうか | オフ    |
+| Interval                              | 既読処理の実行間隔（分） | 5（分） |
+| Save                                  | 設定を保存します         |         |
+
+![不要な通知を自動で既読にする機能](docs/screen-shots/ja/auto-read-uninformative-notifications.png)
+
 ## アップデート
+
+### リリース v1.2.0 :tada:
+
+#### 新機能・機能改善
+
+- [NEW!] 不要な通知を自動で既読にする機能を追加しました。
+  - 使い方は上記の「[使い方->不要な通知を自動で既読にする機能](#不要な通知を自動で既読にする機能)」をご参照ください
+
+#### 軽微な修正
+
+- 依存ライブラリを更新しました
 
 ### リリース v1.1.0 :tada:
 
