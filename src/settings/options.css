@@ -1,0 +1,32 @@
+html {
+  font-family: sans-serif;
+}
+
+form {
+  width: 600px;
+  margin: 0 auto;
+}
+
+div {
+  margin-bottom: 10px;
+}
+
+fieldset {
+  background: #a1acff;
+  border: 5px solid #000fa1;
+}
+
+legend {
+  padding: 10px;
+  background: #000fa1;
+  color: white;
+}
+
+button {
+  display: inline;
+}
+
+p#options-saved {
+  display: inline;
+  visibility: hidden;
+}

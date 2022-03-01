@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+  </head>
+
+  <body>
+    <form>
+      <fieldset>
+        <legend>Options</legend>
+        <div>
+          <input
+            type="checkbox"
+            id="enable-auto-read"
+            name="enable-auto-read"
+          />
+          <label for="enable-auto-read">
+            Auto-read uninformative notifications</label
+          >
+        </div>
+        <div>
+          <label for="auto-read-interval">Interval (min): </label>
+          <input
+            type="number"
+            id="auto-read-interval"
+            name="auto-read-interval"
+            value="5"
+            min="0"
+          />
+        </div>
+        <div>
+          <button type="submit">Save</button>
+          <p id="options-saved">Saved!!!</p>
+        </div>
+      </fieldset>
+    </form>
+  </body>
+</html>

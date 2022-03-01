@@ -29,8 +29,25 @@
         "https://*.cybozu-dev.cn/g/schedule/participate*",
         "https://*.cybozu-dev.cn/g/schedule/leave*"
       ],
-      "js": ["js/main.js"],
+      "js": ["content-scripts/prevent-send-notification.js"],
+      "run_at": "document_end"
+    },
+    {
+      "matches": [
+        "https://*.cybozu.com/*",
+        "https://*.cybozu-dev.com/*",
+        "https://*.kintone.com/*",
+        "https://*.kintone-dev.com/*",
+        "https://*.cybozu.cn/*",
+        "https://*.cybozu-dev.cn/*"
+      ],
+      "js": ["content-scripts/auto-read-notifications.js"],
       "run_at": "document_end"
     }
-  ]
+  ],
+  "options_ui": {
+    "page": "settings/options.html",
+    "open_in_tab": false
+  },
+  "permissions": ["storage"]
 }
