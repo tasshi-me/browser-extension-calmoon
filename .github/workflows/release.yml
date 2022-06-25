@@ -1,107 +1,41 @@
-name: Production
-
+name: release-and-publish
 on:
   push:
     branches:
-      - "master"
+      - main
 
 jobs:
-  test:
-    runs-on: ubuntu-latest
-    outputs:
-      pkg_version: ${{ steps.set_pkg_version.outputs.pkg_version }}
-      tag_exists: ${{ steps.check_tag_exists.outputs.tag_exists }}
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-      - name: Check node and yarn version
-        run: |
-          echo "node: `node -v`"
-          echo "yarn: v`yarn -v`"
-      - name: Install dependences
-        run: yarn install
-      - name: Lint project
-        run: yarn lint
-      - name: Test project
-        run: yarn run test
-      - name: Build package
-        run: yarn run build:all
-      - name: Test built package (Chrome)
-        run: yarn run web-ext lint --source-dir ./build/chrome
-      - name: Test built package (Firefox)
-        run: yarn run web-ext lint --source-dir ./build/firefox
-      - name: Package artifacts
-        run: yarn run package:all
-      - name: Set package version to outputs
-        id: set_pkg_version
-        run: echo ::set-output name=pkg_version::$(jq -r '.version' ./package.json)
-      - name: Check if release tag already exists
-        id: check_tag_exists
-        run: |
-          if [ $(git tag -l v${{ steps.set_pkg_version.outputs.pkg_version }}) ];then
-            echo "tag v${{ steps.set_pkg_version.outputs.pkg_version }} already exists. release will be skipped."
-            echo ::set-output name=tag_exists::1
-          else
-            echo ::set-output name=tag_exists::0
-          fi
-      - name: Export release note
-        if: steps.check_tag_exists.outputs.tag_exists == 0
-        run: cp ./docs/release-notes/${{ steps.set_pkg_version.outputs.pkg_version }}.md ./web-ext-artifacts/release-note-${{ steps.set_pkg_version.outputs.pkg_version }}.md
-      - name: Upload web-ext-artifacts
-        if: steps.check_tag_exists.outputs.tag_exists == 0
-        uses: actions/upload-artifact@v3
-        with:
-          name: artifacts-${{ github.sha }}
-          path: ./web-ext-artifacts/
   release:
-    needs: test
+    outputs:
+      release_created: ${{ steps.release.outputs.release_created }}
+      upload_url: ${{ steps.release.outputs.upload_url }}
     runs-on: ubuntu-latest
-    if: needs.test.outputs.tag_exists == 0
     steps:
-      - name: Download artifacts
-        uses: actions/download-artifact@v3
+      - uses: google-github-actions/release-please-action@v3
+        id: release
         with:
-          name: artifacts-${{ github.sha }}
-      - name: Set release note (escaped)
-        run: echo "release_note_escaped=$(cat ./release-note-${{ needs.test.outputs.pkg_version }}.md| tr '\n' '\a' | sed -r -e 's/\a/%0A/g')" >> $GITHUB_ENV
-      - name: Create Release
-        id: create_release
-        uses: actions/create-release@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
+          command: manifest
+
+  # https://github.com/google-github-actions/release-please-action#automating-publication-to-npm
+  upload-package:
+    runs-on: ubuntu-latest
+    needs: release
+    if: ${{ needs.release.outputs.release_created }}
+    steps:
+      - uses: actions/checkout@v3
+      - uses: nodenv/actions/node-version@main
+        id: nodenv
+      - name: Use Node.js ${{ steps.nodenv.outputs.node-version }}
+        uses: actions/setup-node@v3
         with:
-          tag_name: v${{ needs.test.outputs.pkg_version }}
-          release_name: Release v${{ needs.test.outputs.pkg_version }}
-          body: ${{ env.release_note_escaped }}
-          draft: true
-          prerelease: false
-      - name: Upload Release Artifacts (Chrome)
-        id: upload-release-artifacts-chrome
-        uses: actions/upload-release-asset@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./chrome/calmoon_for_garoon-${{ needs.test.outputs.pkg_version }}.zip
-          asset_name: calmoon_for_garoon-${{ needs.test.outputs.pkg_version }}-chrome.zip
-          asset_content_type: application/zip
-      - name: Upload Release Artifacts (Firefox)
-        id: upload-release-artifacts-firefox
-        uses: actions/upload-release-asset@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./firefox/calmoon_for_garoon-${{ needs.test.outputs.pkg_version }}.zip
-          asset_name: calmoon_for_garoon-${{ needs.test.outputs.pkg_version }}-firefox.zip
-          asset_content_type: application/zip
-      - name: Upload Release Note
-        id: upload-release-note
-        uses: actions/upload-release-asset@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./release-note-${{ needs.test.outputs.pkg_version }}.md
-          asset_name: release-note-${{ needs.test.outputs.pkg_version }}.md
-          asset_content_type: text/markdown
+          node-version: "${{ steps.nodenv.outputs.node-version }}"
+          registry-url: 'https://registry.npmjs.org'
+      - run: yarn install --frozen-lockfile
+      - run: yarn package:all
+      - run: echo "::set-output name=pkg_version::$(jq -r '.version' ./package.json)"
+        id: pkg_version
+      - name: Upload package
+        run: |
+          gh release upload ${{ needs.release.outputs.tag_name }} \
+          ./web-ext-artifacts/chrome/calmoon_for_garoon-${{ needs.test.outputs.pkg_version }}.zip#calmoon_for_garoon-${{ steps.pkg_version.outputs.pkg_version }}-chrome.zip \
+          ./firefox/calmoon_for_garoon-${{ needs.test.outputs.pkg_version }}.zip#calmoon_for_garoon-${{ steps.pkg_version.outputs.pkg_version }}-firefox.zip
