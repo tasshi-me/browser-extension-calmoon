@@ -18,3 +18,7 @@ web-ext-artifacts/
 
 # misc
 **/.DS_Store
+
+# editor
+.vscode
+.idea
