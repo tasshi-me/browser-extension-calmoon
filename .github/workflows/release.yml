@@ -8,7 +8,7 @@ jobs:
   release:
     outputs:
       release_created: ${{ steps.release.outputs.release_created }}
-      upload_url: ${{ steps.release.outputs.upload_url }}
+      tag_name: ${{ steps.release.outputs.tag_name }}
     runs-on: ubuntu-latest
     steps:
       - uses: google-github-actions/release-please-action@v3
@@ -35,6 +35,8 @@ jobs:
       - run: echo "::set-output name=pkg_version::$(jq -r '.version' ./package.json)"
         id: pkg_version
       - name: Upload package
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           gh release upload ${{ needs.release.outputs.tag_name }} \
           ./web-ext-artifacts/chrome/calmoon_for_garoon-${{ needs.test.outputs.pkg_version }}.zip#calmoon_for_garoon-${{ steps.pkg_version.outputs.pkg_version }}-chrome.zip \
