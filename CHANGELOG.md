@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.1](https://github.com/mshrtsr/browser-extension-calmoon/compare/browser-extension-calmoon-v1.3.0...browser-extension-calmoon-v1.3.1) (2022-06-25)
+
+
+### Miscellaneous Chores
+
+* upload package to release ([f5224f7](https://github.com/mshrtsr/browser-extension-calmoon/commit/f5224f78fd24a518cda298f9fbffa84fafe30f4c))
+
 ## [1.3.0](https://github.com/mshrtsr/browser-extension-calmoon/compare/browser-extension-calmoon-v1.2.0...browser-extension-calmoon-v1.3.0) (2022-06-25)
 
 
