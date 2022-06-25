@@ -48,31 +48,7 @@ To use this feature, enable in settings page
 
 ## Recent updates
 
-# Release v1.2.0 :tada:
-
-## Changes in this Release
-
-### Features
-
-- [New!] Auto-read uninformative notifications
-  - To use this feature, see [Usage](#usage) section
-
-### Chores
-
-- Update dependencies
-
-### Release v1.1.0 :tada:
-
-#### Changes in this Release
-
-- Add Japanese localization
-
-### Release v1.0.0 :tada:
-
-#### Changes in this Release
-
-- First release of Calmoon
-- This extension disable "Notify this update" when you join/leave event on [Garoon](https://garoon.cybozu.co.jp/)
+See [CHANGELOG.md](CHANGELOG.md).
 
 <!-- ## Usage -->
 
