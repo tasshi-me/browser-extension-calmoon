@@ -22,3 +22,6 @@ web-ext-artifacts/
 # editor
 .vscode
 .idea
+
+# secrets
+.envrc
