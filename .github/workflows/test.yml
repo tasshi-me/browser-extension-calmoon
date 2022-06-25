@@ -1,0 +1,25 @@
+name: test
+on:
+  push:
+
+jobs:
+  test:
+    name: Test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: nodenv/actions/node-version@main
+        id: nodenv
+      - name: Use Node.js ${{ steps.nodenv.outputs.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: "${{ steps.nodenv.outputs.node-version }}"
+      - name: yarn install, build, and test
+        run: |
+          yarn install --frozen-lockfile
+          yarn build:all
+          yarn test
+      - name: Test built package (Chrome)
+        run: yarn run web-ext lint --source-dir ./build/chrome
+      - name: Test built package (Firefox)
+        run: yarn run web-ext lint --source-dir ./build/firefox
