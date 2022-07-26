@@ -57,7 +57,7 @@
     "mini-css-extract-plugin": "^2.6.1",
     "npm-run-all": "^4.1.5",
     "prettier": "^2.7.1",
-    "release-please": "^13.19.3",
+    "release-please": "^13.19.4",
     "rimraf": "^3.0.2",
     "ts-jest": "^28.0.7",
     "ts-loader": "^9.3.1",
