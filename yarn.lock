@@ -7074,10 +7074,10 @@ relaxed-json@1.0.3:
     chalk "^2.4.2"
     commander "^2.6.0"
 
-release-please@^14.3.0:
-  version "14.3.0"
-  resolved "https://registry.yarnpkg.com/release-please/-/release-please-14.3.0.tgz#195aef1a40d648d6012537be81596d5415541b7a"
-  integrity sha512-2TvMrQZixvXQLvMu234YhJRSLNEjGLiwmSbS6PLDCtiUaZ4gcA/zrByXvNmbEdgx6h8qRoUdRVav+0CRmUi5DQ==
+release-please@^14.3.1:
+  version "14.3.1"
+  resolved "https://registry.yarnpkg.com/release-please/-/release-please-14.3.1.tgz#2d7b16df79fc53ddc9d2c49e685a40383a92feae"
+  integrity sha512-+6cS3OV910ZXcdjF5RqNzd/gaw68oc3/TE94aGmFEyoJ4gfaCyGWJPYBbKUVRvsqWbN3l3GFNOAsuXAVNLZnsA==
   dependencies:
     "@conventional-commits/parser" "^0.4.1"
     "@google-automations/git-file-utils" "^1.1.0"
