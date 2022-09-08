@@ -401,7 +401,7 @@
     minimatch "^3.1.2"
     strip-json-comments "^3.1.1"
 
-"@google-automations/git-file-utils@^1.1.0":
+"@google-automations/git-file-utils@^1.2.0":
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/@google-automations/git-file-utils/-/git-file-utils-1.2.0.tgz#616bbcff928930827e0a99cd0a50f1e4832d26d0"
   integrity sha512-tHkJQznc9uSBlOoss1vEwTZz/0uM3xLKFapfRX0u2gLTLciCktIsldhbS2GUVWPSvNUxcDgIr9n6iOqAunsQqg==
@@ -7153,13 +7153,13 @@ relaxed-json@1.0.3:
     chalk "^2.4.2"
     commander "^2.6.0"
 
-release-please@^14.3.1:
-  version "14.3.1"
-  resolved "https://registry.yarnpkg.com/release-please/-/release-please-14.3.1.tgz#2d7b16df79fc53ddc9d2c49e685a40383a92feae"
-  integrity sha512-+6cS3OV910ZXcdjF5RqNzd/gaw68oc3/TE94aGmFEyoJ4gfaCyGWJPYBbKUVRvsqWbN3l3GFNOAsuXAVNLZnsA==
+release-please@^14.5.0:
+  version "14.5.0"
+  resolved "https://registry.yarnpkg.com/release-please/-/release-please-14.5.0.tgz#219ac39156ccb4763f1dc9a35a360cbcc55a6e70"
+  integrity sha512-yJ36sJ4cDgjB4Zic4aXfhImqZC3wOJfRwLofpexdblM7ohy+13E1BFBzipWtWBh19e7UTnQTQVHIGBx9oLkGKg==
   dependencies:
     "@conventional-commits/parser" "^0.4.1"
-    "@google-automations/git-file-utils" "^1.1.0"
+    "@google-automations/git-file-utils" "^1.2.0"
     "@iarna/toml" "^2.2.5"
     "@lerna/collect-updates" "^4.0.0"
     "@lerna/package" "^4.0.0"
