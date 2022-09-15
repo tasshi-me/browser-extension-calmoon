@@ -6266,10 +6266,10 @@ node-forge@^1.3.1:
   resolved "https://registry.yarnpkg.com/node-forge/-/node-forge-1.3.1.tgz#be8da2af243b2417d5f646a770663a92b7e9ded3"
   integrity sha512-dPEtOeMvF9VMcYV/1Wb8CPoVAXtp6MKMlcbAt4ddqmGqUJ6fQZFXkNZNkNlfevtNkGtaSoXf/vNNNSvgrdXwtA==
 
-node-html-parser@^5.0.0:
-  version "5.3.3"
-  resolved "https://registry.yarnpkg.com/node-html-parser/-/node-html-parser-5.3.3.tgz#2845704f3a7331a610e0e551bf5fa02b266341b6"
-  integrity sha512-ncg1033CaX9UexbyA7e1N0aAoAYRDiV8jkTvzEnfd1GDvzFdrsXLzR4p4ik8mwLgnaKP/jyUFWDy9q3jvRT2Jw==
+node-html-parser@^6.0.0:
+  version "6.0.0"
+  resolved "https://registry.yarnpkg.com/node-html-parser/-/node-html-parser-6.0.0.tgz#da86ce139ba0b9ec72f86f32a5997738f2b51255"
+  integrity sha512-o4vS5Jm7ZdV5WN4/jHmCEVJOpm4exLCeXOcZnNzXi0BGv0AS8FsGwyQ4k0Ujmui1NMQs6qsTy+amjjpr9rmz4Q==
   dependencies:
     css-select "^4.2.1"
     he "1.2.0"
@@ -7237,10 +7237,10 @@ relaxed-json@1.0.3:
     chalk "^2.4.2"
     commander "^2.6.0"
 
-release-please@^14.5.0:
-  version "14.5.0"
-  resolved "https://registry.yarnpkg.com/release-please/-/release-please-14.5.0.tgz#219ac39156ccb4763f1dc9a35a360cbcc55a6e70"
-  integrity sha512-yJ36sJ4cDgjB4Zic4aXfhImqZC3wOJfRwLofpexdblM7ohy+13E1BFBzipWtWBh19e7UTnQTQVHIGBx9oLkGKg==
+release-please@^14.6.0:
+  version "14.6.0"
+  resolved "https://registry.yarnpkg.com/release-please/-/release-please-14.6.0.tgz#f7db0bc7d830f6b0ea338abdb0320ab5c181ed3a"
+  integrity sha512-QSIAEoDlaQN/OhCiEntuzDTXaZl9ozZyRgXKCc8ASZwCbX+noqqHPSPAMTV+qEpitETsI842TeiRsgKsTpd3qg==
   dependencies:
     "@conventional-commits/parser" "^0.4.1"
     "@google-automations/git-file-utils" "^1.2.0"
@@ -7265,7 +7265,7 @@ release-please@^14.5.0:
     figures "^3.0.0"
     js-yaml "^4.0.0"
     jsonpath "^1.1.1"
-    node-html-parser "^5.0.0"
+    node-html-parser "^6.0.0"
     parse-github-repo-url "^1.4.1"
     semver "^7.0.0"
     type-fest "^2.0.0"
