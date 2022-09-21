@@ -7266,7 +7266,7 @@ relaxed-json@1.0.3:
     chalk "^2.4.2"
     commander "^2.6.0"
 
-release-please@^14.6.1:
+release-please@^14.7.0:
   version "14.7.0"
   resolved "https://registry.yarnpkg.com/release-please/-/release-please-14.7.0.tgz#fa3e558f84d5f53da926b3bf524e59062d4cca00"
   integrity sha512-LQhhaF+B2D13KARlWIMrQI9fF/due4Rv1AAf2bVzfD1puwVvXS6DfCwowPVqLYv1GZF9CvIvUiRmfrYBBIkfdg==
