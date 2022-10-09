@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.2](https://github.com/mshrtsr/browser-extension-calmoon/compare/browser-extension-calmoon-v1.3.1...browser-extension-calmoon-v1.3.2) (2022-10-08)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @miyajan/garoon-rest to ^0.4.2 ([#311](https://github.com/mshrtsr/browser-extension-calmoon/issues/311)) ([dfcaaff](https://github.com/mshrtsr/browser-extension-calmoon/commit/dfcaaff4a7f83eeaa1985a9607a79c404f298394))
+
 ## [1.3.1](https://github.com/mshrtsr/browser-extension-calmoon/compare/browser-extension-calmoon-v1.3.0...browser-extension-calmoon-v1.3.1) (2022-06-26)
 
 
