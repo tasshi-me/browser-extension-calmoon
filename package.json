@@ -36,7 +36,7 @@
     "release-note:new": "$PWD/tools/generate-release-note.sh"
   },
   "devDependencies": {
-    "@cybozu/eslint-config": "^18.0.1",
+    "@cybozu/eslint-config": "^18.0.2",
     "@tsconfig/recommended": "^1.0.2",
     "@types/copy-webpack-plugin": "^10.1.0",
     "@types/jest": "^29.5.0",
