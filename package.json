@@ -45,7 +45,7 @@
     "@types/webpack": "^5.28.1",
     "chrome-manifest-loader": "^0.3.0",
     "copy-webpack-plugin": "^11.0.0",
-    "css-loader": "^6.7.4",
+    "css-loader": "^6.8.0",
     "eslint": "^8.41.0",
     "extract-loader": "^5.1.0",
     "file-loader": "^6.2.0",
