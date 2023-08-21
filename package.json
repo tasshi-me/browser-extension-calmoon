@@ -51,7 +51,7 @@
     "file-loader": "^6.2.0",
     "html-loader": "^4.2.0",
     "html-webpack-plugin": "^5.5.3",
-    "jest": "^29.6.2",
+    "jest": "^29.6.3",
     "json-minimizer-webpack-plugin": "^4.0.0",
     "merge-jsons-webpack-plugin": "^2.0.1",
     "mini-css-extract-plugin": "^2.7.6",
