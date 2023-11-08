@@ -41,7 +41,7 @@
     "@types/copy-webpack-plugin": "^10.1.0",
     "@types/jest": "^29.5.8",
     "@types/mini-css-extract-plugin": "^2.5.0",
-    "@types/webextension-polyfill": "^0.10.5",
+    "@types/webextension-polyfill": "^0.10.6",
     "@types/webpack": "^5.28.4",
     "chrome-manifest-loader": "^0.3.0",
     "copy-webpack-plugin": "^11.0.0",
