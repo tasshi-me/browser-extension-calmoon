@@ -1,6 +1,6 @@
 <img src="src/icons/icon-128.png" alt="icon of calmoon" align="right" />
 
-# Calmoon for Garoon ![Production](https://github.com/mshrtsr/browser-extension-calmoon/workflows/Production/badge.svg) ![Development](https://github.com/mshrtsr/browser-extension-calmoon/workflows/Development/badge.svg)
+# Calmoon for Garoon [![test](https://github.com/mshrtsr/browser-extension-calmoon/actions/workflows/test.yml/badge.svg)](https://github.com/mshrtsr/browser-extension-calmoon/actions/workflows/test.yml) [![lint](https://github.com/mshrtsr/browser-extension-calmoon/actions/workflows/lint.yml/badge.svg)](https://github.com/mshrtsr/browser-extension-calmoon/actions/workflows/lint.yml)
 
 Make you free from sending/receiving notifications on [Garoon](https://garoon.cybozu.co.jp/) :shushing_face:
 
