@@ -3,7 +3,7 @@
   "version": "1.3.2",
   "description": "Disable \"Notify this update\" when you join/leave event on Garoon",
   "main": "src/app/calmoon.ts",
-  "repository": "git@github.com:mshrtsr/browser-extension-calmoon.git",
+  "repository": "git@github.com:tasshi-me/browser-extension-calmoon.git",
   "author": "Masaharu TASHIRO <masatsr.kit@gmail.com>",
   "license": "MIT",
   "scripts": {

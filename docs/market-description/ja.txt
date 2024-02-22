@@ -3,6 +3,6 @@
 - 予定に参加/抜けるときの「この更新を通知する」をデフォルトでオフにします
 - 不要な通知を自動で既読にして本来見るべき通知に集中できるようにします
 
-詳細はこちら: https://github.com/mshrtsr/browser-extension-calmoon/blob/master/README_ja.md
+詳細はこちら: https://github.com/tasshi-me/browser-extension-calmoon/blob/master/README_ja.md
 
 この OSS は、私個人の著作物であり、サイボウズ株式会社、その他、私の所属する組織とは一切関係ありません。

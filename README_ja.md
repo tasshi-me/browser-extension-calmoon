@@ -1,6 +1,6 @@
 <img src="src/icons/icon-128.png" alt="通知オフ太郎のアイコン" align="right" />
 
-# 通知オフ太郎 for Garoon ![Production](https://github.com/mshrtsr/browser-extension-calmoon/workflows/Production/badge.svg) ![Development](https://github.com/mshrtsr/browser-extension-calmoon/workflows/Development/badge.svg)
+# 通知オフ太郎 for Garoon ![Production](https://github.com/tasshi-me/browser-extension-calmoon/workflows/Production/badge.svg) ![Development](https://github.com/tasshi-me/browser-extension-calmoon/workflows/Development/badge.svg)
 
 あなたを[Garoon](https://garoon.cybozu.co.jp/)の不要な通知を送る/受け取ることから解放します :shushing_face:
 
@@ -15,7 +15,7 @@ For English readers: [README.md](README.md)
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
 | [![Chromeにインストールする](docs/resources/ChromeWebStore_BadgeWBorder_v2_206x58.png)](https://chrome.google.com/webstore/detail/calmoon-for-garoon/adpfpbogonofdljjmipfpheknmadjdck) | [![Firefoxにインストールする](docs/resources/get-the-addon.png)](https://addons.mozilla.org/ja/firefox/addon/calmoon-for-garoon/) |
 
-ZIP ファイルが必要な方は[リリースノート](https://github.com/mshrtsr/browser-extension-calmoon/releases)のページからダウンロードしてください。
+ZIP ファイルが必要な方は[リリースノート](https://github.com/tasshi-me/browser-extension-calmoon/releases)のページからダウンロードしてください。
 
 ## スクリーンショット
 
