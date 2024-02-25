@@ -11,7 +11,7 @@ jobs:
       - uses: nodenv/actions/node-version@main
         id: nodenv
       - name: Use Node.js ${{ steps.nodenv.outputs.node-version }}
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: "${{ steps.nodenv.outputs.node-version }}"
       - name: yarn install, and yarn lint
