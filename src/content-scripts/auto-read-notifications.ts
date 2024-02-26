@@ -5,11 +5,12 @@ import GaroonSoapAPIClient from "garoon-soap";
 import { NotificationIdType } from "garoon-soap/dist/type/notification";
 import { SyncStorage, LocalStorage } from "../lib/storage-util";
 
-type NotificationItems = ReturnType<
-  GaroonRestAPIClient["notification"]["getItems"]
-> extends Promise<infer T>
-  ? T
-  : unknown;
+type NotificationItems =
+  ReturnType<GaroonRestAPIClient["notification"]["getItems"]> extends Promise<
+    infer T
+  >
+    ? T
+    : unknown;
 type NotificationItemsWithNotificationKey = Omit<NotificationItems, "items"> & {
   items: Array<
     (NotificationItems["items"] extends Array<infer U> ? U : unknown) & {
@@ -21,7 +22,7 @@ type NotificationItemsWithNotificationKey = Omit<NotificationItems, "items"> & {
 (async () => {
   const garoonRestApiClient = new GaroonRestAPIClient();
   const garoonSoapAPIClient = new GaroonSoapAPIClient(
-    garoonRestApiClient.getBaseUrl()
+    garoonRestApiClient.getBaseUrl(),
   );
 
   const { enableAutoRead, autoReadInterval } = await SyncStorage.getOptions();
@@ -61,11 +62,11 @@ type NotificationItemsWithNotificationKey = Omit<NotificationItems, "items"> & {
         moduleId: notification.moduleId,
         item: notification.notificationKey,
       };
-    }
+    },
   );
   if (notificationIds.length > 0) {
     await garoonSoapAPIClient.notification.confirmNotifications(
-      notificationIds
+      notificationIds,
     );
   }
 
