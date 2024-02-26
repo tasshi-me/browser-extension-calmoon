@@ -6,10 +6,10 @@ import "./options.css";
 const main = async () => {
   await restoreOptions();
   const enableAutoReadEl = document.querySelector<HTMLInputElement>(
-    "input#enable-auto-read"
+    "input#enable-auto-read",
   );
   const autoReadIntervalEl = document.querySelector<HTMLInputElement>(
-    "input#auto-read-interval"
+    "input#auto-read-interval",
   );
   if (autoReadIntervalEl && enableAutoReadEl) {
     autoReadIntervalEl.disabled = !enableAutoReadEl.checked;
@@ -39,10 +39,10 @@ const saveOptions = async () => {
   // console.log("Save options!!");
 
   const enableAutoReadEl = document.querySelector<HTMLInputElement>(
-    "input#enable-auto-read"
+    "input#enable-auto-read",
   );
   const autoReadIntervalEl = document.querySelector<HTMLInputElement>(
-    "input#auto-read-interval"
+    "input#auto-read-interval",
   );
   const enableAutoRead = enableAutoReadEl ? enableAutoReadEl.checked : false;
   const autoReadInterval = autoReadIntervalEl ? autoReadIntervalEl.value : "5";
@@ -64,10 +64,10 @@ const restoreOptions = async () => {
 
   const { enableAutoRead, autoReadInterval } = await SyncStorage.getOptions();
   const enableAutoReadEl = document.querySelector<HTMLInputElement>(
-    "input#enable-auto-read"
+    "input#enable-auto-read",
   );
   const autoReadIntervalEl = document.querySelector<HTMLInputElement>(
-    "input#auto-read-interval"
+    "input#auto-read-interval",
   );
   if (enableAutoReadEl) {
     enableAutoReadEl.checked = enableAutoRead;

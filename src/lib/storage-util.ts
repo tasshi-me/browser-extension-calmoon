@@ -30,7 +30,7 @@ export const LocalStorage = {
   },
 
   setLastAutoReadTimestamp: async (
-    lastAutoReadTimestamp: number
+    lastAutoReadTimestamp: number,
   ): Promise<void> => {
     await browser.storage.local.set({
       lastAutoReadTimestamp,
