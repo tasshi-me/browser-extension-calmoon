@@ -8197,10 +8197,10 @@ relaxed-json@1.0.3:
     chalk "^2.4.2"
     commander "^2.6.0"
 
-release-please@^16.10.0:
-  version "16.10.0"
-  resolved "https://registry.yarnpkg.com/release-please/-/release-please-16.10.0.tgz#d07cc2ae5dd37224c3ce8f103c04a7caf3080ac7"
-  integrity sha512-c9VsQlMGALw5rCsy+7MoGSkOEC54a6ScxiylkxEJ7tt6bFYsXmfk2u/NZP5fdytFZRyHQIee+P7EZc7sfs7I7Q==
+release-please@^16.10.1:
+  version "16.10.1"
+  resolved "https://registry.yarnpkg.com/release-please/-/release-please-16.10.1.tgz#713bf36185b80060c0d9e6f7c6f264f038cec58c"
+  integrity sha512-1F10PG8WIBmC/89GaJpjBtr/c2e4AZFiR39Z4L2IEgHf1CDmgqgqiTNO1oRgb8pg48uiImb2U9N8QUANBLHq2w==
   dependencies:
     "@conventional-commits/parser" "^0.4.1"
     "@google-automations/git-file-utils" "^2.0.0"
