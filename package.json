@@ -62,7 +62,7 @@
     "ts-jest": "^29.1.2",
     "ts-loader": "^9.5.1",
     "ts-node": "^10.9.2",
-    "typescript": "^5.4.3",
+    "typescript": "^5.4.4",
     "web-ext": "^7.11.0",
     "webextension-polyfill": "^0.10.0",
     "webpack": "^5.91.0",
