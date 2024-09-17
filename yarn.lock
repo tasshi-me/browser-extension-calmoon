@@ -8323,10 +8323,10 @@ relaxed-json@1.0.3:
     chalk "^2.4.2"
     commander "^2.6.0"
 
-release-please@^16.12.2:
-  version "16.12.2"
-  resolved "https://registry.yarnpkg.com/release-please/-/release-please-16.12.2.tgz#b3179f0e5e993780b9ddb2d5fc9879833dca5fc3"
-  integrity sha512-2Dwx0Nz9Zdi/I+u6cVcM+unzRws8KUuXYWKePNbjwaNIojcKtUBCFNUM/xMl+J229UJUy+PoJPMle8VMUz7tIw==
+release-please@^16.13.0:
+  version "16.13.0"
+  resolved "https://registry.yarnpkg.com/release-please/-/release-please-16.13.0.tgz#0f5362c3a5049bbe6c1fe9c9077aebb1c9f46199"
+  integrity sha512-zWJvi/O6BLJ71H9z43Jbh2YS1SglZpMZgZo7Kh7S4t1j5DY22ogSeVKsb1hFkbPIgsaPgXAY0Bl7lmUQJQlUug==
   dependencies:
     "@conventional-commits/parser" "^0.4.1"
     "@google-automations/git-file-utils" "^2.0.0"
