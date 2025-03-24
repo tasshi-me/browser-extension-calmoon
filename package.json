@@ -59,7 +59,7 @@
     "prettier": "^3.5.3",
     "release-please": "^16.18.0",
     "rimraf": "^5.0.10",
-    "ts-jest": "^29.2.6",
+    "ts-jest": "^29.3.0",
     "ts-loader": "^9.5.2",
     "ts-node": "^10.9.2",
     "typescript": "^5.8.2",
