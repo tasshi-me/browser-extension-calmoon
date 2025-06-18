@@ -37,7 +37,7 @@
   },
   "devDependencies": {
     "@cybozu/eslint-config": "^22.0.2",
-    "@tsconfig/recommended": "^1.0.9",
+    "@tsconfig/recommended": "^1.0.10",
     "@types/copy-webpack-plugin": "^10.1.0",
     "@types/jest": "^30.0.0",
     "@types/mini-css-extract-plugin": "^2.5.1",
