@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.3](https://github.com/tasshi-me/browser-extension-calmoon/compare/browser-extension-calmoon-v1.3.2...browser-extension-calmoon-v1.3.3) (2025-06-19)
+
+
+### Bug Fixes
+
+* **deps:** update dependency typescript to v5 ([#414](https://github.com/tasshi-me/browser-extension-calmoon/issues/414)) ([be906b2](https://github.com/tasshi-me/browser-extension-calmoon/commit/be906b2f8838c65e986e1bf774c298a54d1a0ec9))
+
 ## [1.3.2](https://github.com/tasshi-me/browser-extension-calmoon/compare/browser-extension-calmoon-v1.3.1...browser-extension-calmoon-v1.3.2) (2022-10-08)
 
 
