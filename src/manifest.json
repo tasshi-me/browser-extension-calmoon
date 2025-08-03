@@ -49,5 +49,11 @@
     "page": "settings/options.html",
     "open_in_tab": false
   },
-  "permissions": ["storage"]
+  "permissions": ["storage"],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "{729f1e82-cfda-4eaf-8e25-0dbc8e3414ce}",
+      "strict_min_version": "109.0"
+    }
+  }
 }
