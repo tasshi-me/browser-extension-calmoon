@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.3.3](https://github.com/tasshi-me/browser-extension-calmoon/compare/browser-extension-calmoon-v1.3.2...browser-extension-calmoon-v1.3.3) (2025-08-03)
+
+
+### Bug Fixes
+
+* **deps:** update dependency typescript to v5 ([#414](https://github.com/tasshi-me/browser-extension-calmoon/issues/414)) ([be906b2](https://github.com/tasshi-me/browser-extension-calmoon/commit/be906b2f8838c65e986e1bf774c298a54d1a0ec9))
+* Migrate to manifest V3 ([#726](https://github.com/tasshi-me/browser-extension-calmoon/issues/726)) ([bc86b3f](https://github.com/tasshi-me/browser-extension-calmoon/commit/bc86b3f7dbd819546fdffbb6a65e8a27a8a5d450))
+* set `browser_specific_settings` for Firefox Manifest v3 ([#728](https://github.com/tasshi-me/browser-extension-calmoon/issues/728)) ([3a2c127](https://github.com/tasshi-me/browser-extension-calmoon/commit/3a2c127cc5cb9099ad5a9d87a77f2f0dfb4d3755))
+
 ## [1.3.2](https://github.com/tasshi-me/browser-extension-calmoon/compare/browser-extension-calmoon-v1.3.1...browser-extension-calmoon-v1.3.2) (2022-10-08)
 
 
