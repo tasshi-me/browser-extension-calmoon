@@ -11,7 +11,7 @@ jobs:
       tag_name: ${{ steps.release.outputs.tag_name }}
     runs-on: ubuntu-latest
     steps:
-      - uses: google-github-actions/release-please-action@e4dc86ba9405554aeba3c6bb2d169500e7d3b4ee # v4
+      - uses: googleapis/release-please-action@a02a34c4d625f9be7cb89156071d8567266a2445 # v4.2.0
         id: release
         with:
           command: manifest
