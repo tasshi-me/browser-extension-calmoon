@@ -19,8 +19,7 @@ jobs:
           yarn install --frozen-lockfile
           yarn build:all
           yarn test
-      # web-extのlintがWeb Extensions用なのでChrome拡張向けには正しく動作しないためコメントアウト
-      # - name: Test built package (Chrome)
-      #   run: yarn run web-ext lint --source-dir ./build/chrome
+      - name: Test built package (Chrome)
+        run: yarn run web-ext lint --source-dir ./build/chrome
       - name: Test built package (Firefox)
         run: yarn run web-ext lint --source-dir ./build/firefox
