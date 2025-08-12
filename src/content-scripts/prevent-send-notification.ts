@@ -5,9 +5,9 @@ import "../manifest.json";
     | HTMLInputElement
     | undefined;
 
-  const shouldNotifyAttendeesEl = document.getElementById("should_notify_attendees") as
-      | HTMLInputElement
-      | undefined;
+  const shouldNotifyAttendeesEl = document.getElementById(
+    "should_notify_attendees",
+  ) as HTMLInputElement | undefined;
 
   if (isNotifyEl != null) {
     isNotifyEl.checked = false;
