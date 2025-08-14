@@ -50,7 +50,7 @@
     "extract-loader": "^5.1.0",
     "file-loader": "^6.2.0",
     "html-loader": "^5.1.0",
-    "html-webpack-plugin": "^5.6.3",
+    "html-webpack-plugin": "^5.6.4",
     "jest": "^30.0.5",
     "json-minimizer-webpack-plugin": "^5.0.1",
     "merge-jsons-webpack-plugin": "^2.0.1",
