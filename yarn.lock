@@ -3914,10 +3914,10 @@ diff@^5.0.0:
   resolved "https://registry.yarnpkg.com/diff/-/diff-5.1.0.tgz#bc52d298c5ea8df9194800224445ed43ffc87e40"
   integrity sha512-D+mk+qE8VC/PAUrlAU34N+VfXev0ghe5ywmpqrawphmVZc1bEfn56uo9qpyGp1p4xpzOHkSW4ztBd6L7Xx4ACw==
 
-diff@^7.0.0:
-  version "7.0.0"
-  resolved "https://registry.yarnpkg.com/diff/-/diff-7.0.0.tgz#3fb34d387cd76d803f6eebea67b921dab0182a9a"
-  integrity sha512-PJWHUb1RFevKCwaFA9RlG5tCd+FO5iRh9A8HEtkmBH2Li03iJriB6m6JIN4rGz3K3JLawI7/veA1xzRKP6ISBw==
+diff@^8.0.3:
+  version "8.0.3"
+  resolved "https://registry.yarnpkg.com/diff/-/diff-8.0.3.tgz#c7da3d9e0e8c283bb548681f8d7174653720c2d5"
+  integrity sha512-qejHi7bcSD4hQAZE0tNAawRK1ZtafHDmMTMkrrIGgSLl7hTnQHmKCeB45xAcbfTqK2zowkM3j3bHt/4b/ARbYQ==
 
 dir-glob@^3.0.1:
   version "3.0.1"
@@ -7937,10 +7937,10 @@ relateurl@^0.2.7:
   resolved "https://registry.yarnpkg.com/relateurl/-/relateurl-0.2.7.tgz#54dbf377e51440aca90a4cd274600d3ff2d888a9"
   integrity sha512-G08Dxvm4iDN3MLM0EsP62EDV9IuhXPR6blNz6Utcp7zyV3tr4HVNINt6MpaRWbxoOHT3Q7YN2P+jaHX8vUbgog==
 
-release-please@^17.1.3:
-  version "17.1.3"
-  resolved "https://registry.yarnpkg.com/release-please/-/release-please-17.1.3.tgz#b67e71edfff93b635f8634a73d5ff3f6b386d0ef"
-  integrity sha512-fs4v5318Z3CLqyqw7EueXzjErtL8oXCv6Kc1mMYi72TAyReyBtOuuMB0lwoC2+LtGmvUYoG+RBXnDVU0DsKUIA==
+release-please@^17.2.0:
+  version "17.2.0"
+  resolved "https://registry.yarnpkg.com/release-please/-/release-please-17.2.0.tgz#24fe7ff9738bcabde9a0166bf095f37ea055cf32"
+  integrity sha512-DIB8gXH+GBwy1MvkJ/xUceVPW+10OOQagNBaOB/V3B8hHbfsVbQjwEL0Hu6zTRsqve9wRvqE48mKtwjaXIxupA==
   dependencies:
     "@conventional-commits/parser" "^0.4.1"
     "@google-automations/git-file-utils" "^3.0.0"
@@ -7957,7 +7957,7 @@ release-please@^17.1.3:
     conventional-changelog-writer "^6.0.0"
     conventional-commits-filter "^3.0.0"
     detect-indent "^6.1.0"
-    diff "^7.0.0"
+    diff "^8.0.3"
     figures "^3.0.0"
     http-proxy-agent "^7.0.0"
     https-proxy-agent "^7.0.0"
