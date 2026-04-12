@@ -7944,7 +7944,7 @@ relateurl@^0.2.7:
   resolved "https://registry.yarnpkg.com/relateurl/-/relateurl-0.2.7.tgz#54dbf377e51440aca90a4cd274600d3ff2d888a9"
   integrity sha512-G08Dxvm4iDN3MLM0EsP62EDV9IuhXPR6blNz6Utcp7zyV3tr4HVNINt6MpaRWbxoOHT3Q7YN2P+jaHX8vUbgog==
 
-release-please@^17.4.1:
+release-please@^17.5.1:
   version "17.5.2"
   resolved "https://registry.yarnpkg.com/release-please/-/release-please-17.5.2.tgz#5dfab233e7e8d9f06ef39ed46344ab69e1954f68"
   integrity sha512-+Yu44GHQdUErH/jbQ/xzLYgHtQl+XCgRx/OOvQWV2Yzi3CA1VHt9GzgRYJtKgTPWoZJRdYePcsCtja5vA7pDrQ==
