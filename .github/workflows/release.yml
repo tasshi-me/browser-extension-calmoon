@@ -23,7 +23,7 @@ jobs:
     if: ${{ needs.release.outputs.release_created }}
     steps:
       - uses: actions/checkout@v4
-      - uses: nodenv/actions/node-version@main
+      - uses: nodenv/actions/node-version@4712a5aca56256eaa307faaf6c5116a36f96f9ec # main
         id: nodenv
       - name: Use Node.js ${{ steps.nodenv.outputs.node-version }}
         uses: actions/setup-node@v4
