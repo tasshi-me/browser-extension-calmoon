@@ -6373,10 +6373,17 @@ js-yaml@^3.13.1:
     argparse "^1.0.7"
     esprima "^4.0.0"
 
-js-yaml@^4.0.0, js-yaml@^4.1.0:
+js-yaml@^4.1.0:
   version "4.1.0"
   resolved "https://registry.yarnpkg.com/js-yaml/-/js-yaml-4.1.0.tgz#c1fb65f8f5017901cdd2c951864ba18458a10602"
   integrity sha512-wpxZs9NoxZaJESJGIZTyDEaYpl0FKSA+FB9aJiyemKhMwkxQg63h4T1KJgUGHpTqPDNRcmmYLugrRjJlBtWvRA==
+  dependencies:
+    argparse "^2.0.1"
+
+js-yaml@^4.3.0:
+  version "4.3.0"
+  resolved "https://registry.yarnpkg.com/js-yaml/-/js-yaml-4.3.0.tgz#d1900572a7f7cf0b5f540c83673e60bad3436592"
+  integrity sha512-1td788aAnnZ5qs7V2QIRl1owjtYpbKt749Y3xauqQgwIIGF/xXWz1wMTEBx5O3LK3lXLVuqXPdPxj2BoFHaW9Q==
   dependencies:
     argparse "^2.0.1"
 
@@ -7939,10 +7946,10 @@ relateurl@^0.2.7:
   resolved "https://registry.yarnpkg.com/relateurl/-/relateurl-0.2.7.tgz#54dbf377e51440aca90a4cd274600d3ff2d888a9"
   integrity sha512-G08Dxvm4iDN3MLM0EsP62EDV9IuhXPR6blNz6Utcp7zyV3tr4HVNINt6MpaRWbxoOHT3Q7YN2P+jaHX8vUbgog==
 
-release-please@^17.10.1:
-  version "17.10.1"
-  resolved "https://registry.yarnpkg.com/release-please/-/release-please-17.10.1.tgz#040673893d69fa00e551f0c61b89eadad0b5f59e"
-  integrity sha512-Wn7NnkgLmBDNubMqsBxfMBVvj11qI2g/9IWvacPcfnizpoOxQOtF+Ooaur2GXzYrjRj4QyInd3xfArRa+20aGw==
+release-please@^17.10.2:
+  version "17.10.3"
+  resolved "https://registry.yarnpkg.com/release-please/-/release-please-17.10.3.tgz#eeaf026a6c3508b7d08873a553c60041b59ca7c3"
+  integrity sha512-uJJYlJFnzV3poxw1eTpv2+dNM0Im2tdfU/FoM/Brfyjz+Xo7TUcNKAaF1mKWCgQ/OJx9tSokimG1BB78XjWJxA==
   dependencies:
     "@conventional-commits/parser" "^0.4.1"
     "@google-automations/git-file-utils" "^3.0.0"
@@ -7963,7 +7970,7 @@ release-please@^17.10.1:
     figures "^3.0.0"
     http-proxy-agent "^7.0.0"
     https-proxy-agent "^7.0.0"
-    js-yaml "^4.0.0"
+    js-yaml "^4.3.0"
     jsonpath-plus "^10.0.0"
     node-html-parser "^6.0.0"
     parse-github-repo-url "^1.4.1"
