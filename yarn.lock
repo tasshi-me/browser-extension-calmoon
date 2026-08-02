@@ -7936,10 +7936,10 @@ relateurl@^0.2.7:
   resolved "https://registry.yarnpkg.com/relateurl/-/relateurl-0.2.7.tgz#54dbf377e51440aca90a4cd274600d3ff2d888a9"
   integrity sha512-G08Dxvm4iDN3MLM0EsP62EDV9IuhXPR6blNz6Utcp7zyV3tr4HVNINt6MpaRWbxoOHT3Q7YN2P+jaHX8vUbgog==
 
-release-please@^17.10.4:
-  version "17.10.4"
-  resolved "https://registry.yarnpkg.com/release-please/-/release-please-17.10.4.tgz#7877738d74cfe366af8f154e06bd8537384b1502"
-  integrity sha512-icymDP75QwigPbfGQ+g487tVkXrAX+TAvbtRD+wtARV6fvePVpNse3DJbRbVAe7Yv8hO3xOucbVJK+t9Wj7oSA==
+release-please@^17.11.0:
+  version "17.11.1"
+  resolved "https://registry.yarnpkg.com/release-please/-/release-please-17.11.1.tgz#8a42d3dd7253396501575dcc02b9c8ffedeb8bb1"
+  integrity sha512-bYlJozfVjsiDjZHHMPec62ZNjamaNaILNPLwJImfvR/AuRhvUM0ZaQegc2BzjQPSFEn/UzWGPL0m1T83AUct9g==
   dependencies:
     "@conventional-commits/parser" "^0.4.1"
     "@google-automations/git-file-utils" "^3.0.0"
