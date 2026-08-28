@@ -682,14 +682,13 @@
   resolved "https://registry.yarnpkg.com/@fregante/relaxed-json/-/relaxed-json-2.0.0.tgz#c0ae5103a5473fb5dd54931107e35129351e527a"
   integrity sha512-PyUXQWB42s4jBli435TDiYuVsadwRHnMc27YaLouINktvTWsL3FcKrRMGawTayFk46X+n5bE23RjUTWQwrukWw==
 
-"@google-automations/git-file-utils@^3.0.0":
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/@google-automations/git-file-utils/-/git-file-utils-3.0.0.tgz#8cfd05c0986251bbef85fa9e245ddfa45642cd20"
-  integrity sha512-e+WLoKR0TchIhKsSDOnd/su171eXKAAdLpP2tS825UAloTgfYus53kW8uKoVj9MAsMjXGXsJ2s1ASgjq81xVdA==
+"@google-automations/git-file-utils@^3.2.0":
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/@google-automations/git-file-utils/-/git-file-utils-3.2.0.tgz#d8acdce29cd4c3be348b27cc693f28b7f45b55ce"
+  integrity sha512-EtQD1DX17kGpckDNCdI0jvMdF98EWR/TM9uogQtnhK0ODv8z5tPSPMICv2lk54c/9ucUgbfdLDrRdDyx56Sznw==
   dependencies:
     "@octokit/rest" "^20.1.1"
-    "@octokit/types" "^13.0.0"
-    minimatch "^5.1.0"
+    minimatch "^10.2.4"
 
 "@humanwhocodes/config-array@^0.13.0":
   version "0.13.0"
@@ -3112,6 +3111,13 @@ brace-expansion@^5.0.2:
   version "5.0.2"
   resolved "https://registry.yarnpkg.com/brace-expansion/-/brace-expansion-5.0.2.tgz#b6c16d0791087af6c2bc463f52a8142046c06b6f"
   integrity sha512-Pdk8c9poy+YhOgVWw1JNN22/HcivgKWwpxKq04M/jTmHyCZn12WPJebZxdjSa5TmBqISrUSgNYU3eRORljfCCw==
+  dependencies:
+    balanced-match "^4.0.2"
+
+brace-expansion@^5.0.8:
+  version "5.0.9"
+  resolved "https://registry.yarnpkg.com/brace-expansion/-/brace-expansion-5.0.9.tgz#7c72438809b5fa5babf54199a1f1c281a6984fcf"
+  integrity sha512-ScQ4IuvIEF1TMlP7Zt+vjJ//9zlPb2SDcxWxM3bk8s6t6GGdJ7KO1dCcTidOPJKePW30LE/2cT7wCyPho9/Wxg==
   dependencies:
     balanced-match "^4.0.2"
 
@@ -6375,10 +6381,10 @@ js-yaml@^4.1.0:
   dependencies:
     argparse "^2.0.1"
 
-js-yaml@^4.3.0:
-  version "4.3.0"
-  resolved "https://registry.yarnpkg.com/js-yaml/-/js-yaml-4.3.0.tgz#d1900572a7f7cf0b5f540c83673e60bad3436592"
-  integrity sha512-1td788aAnnZ5qs7V2QIRl1owjtYpbKt749Y3xauqQgwIIGF/xXWz1wMTEBx5O3LK3lXLVuqXPdPxj2BoFHaW9Q==
+js-yaml@^4.3.1:
+  version "4.3.2"
+  resolved "https://registry.yarnpkg.com/js-yaml/-/js-yaml-4.3.2.tgz#8e44fb14a2643c59726bb15787b5f1512cb3d3fb"
+  integrity sha512-SFNOvSJ+Dgf/9An904Yx+CgSlIPCkIpao4qo51lpee25TIRejdH3rhR4EZMGoNx3/TP3O+wzWuiTFl4sqbltzA==
   dependencies:
     argparse "^2.0.1"
 
@@ -6844,19 +6850,19 @@ minimatch@^10.2.1:
   dependencies:
     brace-expansion "^5.0.2"
 
+minimatch@^10.2.4:
+  version "10.2.6"
+  resolved "https://registry.yarnpkg.com/minimatch/-/minimatch-10.2.6.tgz#fd956bbe0b77241e9f15ac5dccb1c638060968ef"
+  integrity sha512-vpLQEs+VLCr1nU0BXS07maYoFwlDAH0gngQuuttxIwutDFEMHq2blX+8vpgxDdK3J1PwjCJiep77OitTZ4Ll1A==
+  dependencies:
+    brace-expansion "^5.0.8"
+
 minimatch@^3.0.2, minimatch@^3.0.4, minimatch@^3.0.5, minimatch@^3.1.1, minimatch@^3.1.2:
   version "3.1.2"
   resolved "https://registry.yarnpkg.com/minimatch/-/minimatch-3.1.2.tgz#19cd194bfd3e428f049a70817c038d89ab4be35b"
   integrity sha512-J7p63hRiAjw1NDEww1W7i37+ByIrOWO5XQQAzZ3VOcL0PNybwpfmV/N05zFAzwQ9USyEcX6t3UO+K5aqBQOIHw==
   dependencies:
     brace-expansion "^1.1.7"
-
-minimatch@^5.1.0:
-  version "5.1.0"
-  resolved "https://registry.yarnpkg.com/minimatch/-/minimatch-5.1.0.tgz#1717b464f4971b144f6aabe8f2d0b8e4511e09c7"
-  integrity sha512-9TPBGGak4nHfGZsPBohm9AWg6NoT7QTCehS3BIJABslyZbzxfV78QM2Y6+i741OPZIafFAaiiEMh5OyIrJPgtg==
-  dependencies:
-    brace-expansion "^2.0.1"
 
 minimatch@^9.0.4:
   version "9.0.4"
@@ -7936,13 +7942,13 @@ relateurl@^0.2.7:
   resolved "https://registry.yarnpkg.com/relateurl/-/relateurl-0.2.7.tgz#54dbf377e51440aca90a4cd274600d3ff2d888a9"
   integrity sha512-G08Dxvm4iDN3MLM0EsP62EDV9IuhXPR6blNz6Utcp7zyV3tr4HVNINt6MpaRWbxoOHT3Q7YN2P+jaHX8vUbgog==
 
-release-please@^17.11.1:
-  version "17.11.1"
-  resolved "https://registry.yarnpkg.com/release-please/-/release-please-17.11.1.tgz#8a42d3dd7253396501575dcc02b9c8ffedeb8bb1"
-  integrity sha512-bYlJozfVjsiDjZHHMPec62ZNjamaNaILNPLwJImfvR/AuRhvUM0ZaQegc2BzjQPSFEn/UzWGPL0m1T83AUct9g==
+release-please@^17.11.2:
+  version "17.11.2"
+  resolved "https://registry.yarnpkg.com/release-please/-/release-please-17.11.2.tgz#82b5dea8f2f50e18001cbd21de569a7c1f781358"
+  integrity sha512-we0+NgyHjvczxrilD6aujnRNuASd65Jem0dY5evevxSZvz8BnKnB/QRN3UzGA229fcV09lKCYbqeE9HgkXzGmA==
   dependencies:
     "@conventional-commits/parser" "^0.4.1"
-    "@google-automations/git-file-utils" "^3.0.0"
+    "@google-automations/git-file-utils" "^3.2.0"
     "@iarna/toml" "^3.0.0"
     "@octokit/graphql" "^7.1.0"
     "@octokit/request" "^8.3.1"
@@ -7960,7 +7966,7 @@ release-please@^17.11.1:
     figures "^3.0.0"
     http-proxy-agent "^7.0.0"
     https-proxy-agent "^7.0.0"
-    js-yaml "^4.3.0"
+    js-yaml "^4.3.1"
     jsonpath-plus "^10.0.0"
     node-html-parser "^6.0.0"
     parse-github-repo-url "^1.4.1"
