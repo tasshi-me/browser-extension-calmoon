@@ -1,5 +1,5 @@
 This extension make you free from sending/receiving notifications on Garoon🤫
-- Disable "Notify this update" when you join/leave event on Garoon
+- Disable "Notify this update" when you join/leave or modify an appointment on Garoon
 - Auto-read uninformative notifications
 
 More details: https://github.com/tasshi-me/browser-extension-calmoon

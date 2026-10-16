@@ -4,7 +4,7 @@
 
 Make you free from sending/receiving notifications on [Garoon](https://garoon.cybozu.co.jp/) :shushing_face:
 
-- Disable "Notify this update" when you join/leave event
+- Disable "Notify this update" when you join/leave or modify an appointment
 - Auto-read uninformative notifications
 
 For Japanese readers: [README_ja.md](README_ja.md)
@@ -25,6 +25,7 @@ If you need a zip file, please download from [release page](https://github.com/t
 
 ### Disable "Notify this update" notification
 
+On the screens for joining/leaving an appointment and for modifying an appointment, the "Notify this update" / "Notify attendees of this appointment update" checkbox is automatically unchecked.
 This feature is automatically enabled after installation.
 
 ### Auto-read uninformative notifications
@@ -35,7 +36,7 @@ Notifications that meet the following rules will be auto-read.
 
 To use this feature, enable in settings page
 
-- Chrome: Extentions(["`chrome://extensions/`"](chrome://extensions/))->「「Calmoon」」->「Details」->「Options」
+- Chrome: Extensions(["`chrome://extensions/`"](chrome://extensions/))->「Calmoon」->「Details」->「Options」
 - Firefox: Addons(["`about:addons`"](about:addons))->「Calmoon」->「Preferences」
 
 | Option                                | Description                          | Initial value |
