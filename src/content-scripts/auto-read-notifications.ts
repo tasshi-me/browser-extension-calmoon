@@ -1,5 +1,5 @@
 import "../manifest.json";
-// eslint-disable-next-line node/no-unpublished-import
+
 import { GaroonRestAPIClient } from "@miyajan/garoon-rest";
 import GaroonSoapAPIClient from "garoon-soap";
 import { NotificationIdType } from "garoon-soap/dist/type/notification";
