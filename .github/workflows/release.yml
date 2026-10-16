@@ -23,6 +23,7 @@ jobs:
     if: ${{ needs.release.outputs.release_created }}
     steps:
       - uses: actions/checkout@v7
+      - uses: pnpm/action-setup@v4
       - uses: nodenv/actions/node-version@9786f5d00d4d713533372f46cbc78fa149976ae8 # main
         id: nodenv
       - name: Use Node.js ${{ steps.nodenv.outputs.node-version }}
@@ -30,8 +31,8 @@ jobs:
         with:
           node-version: "${{ steps.nodenv.outputs.node-version }}"
           registry-url: 'https://registry.npmjs.org'
-      - run: yarn install --frozen-lockfile
-      - run: yarn package:all
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm package:all
       - run: echo "::set-output name=pkg_version::$(jq -r '.version' ./package.json)"
         id: pkg_version
       - name: Upload package

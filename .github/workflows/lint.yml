@@ -9,13 +9,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
+      - uses: pnpm/action-setup@v4
       - uses: nodenv/actions/node-version@9786f5d00d4d713533372f46cbc78fa149976ae8 # main
         id: nodenv
       - name: Use Node.js ${{ steps.nodenv.outputs.node-version }}
         uses: actions/setup-node@v7
         with:
           node-version: "${{ steps.nodenv.outputs.node-version }}"
-      - name: yarn install, and yarn lint
+      - name: pnpm install, and pnpm lint
         run: |
-          yarn install --frozen-lockfile
-          yarn lint
+          pnpm install --frozen-lockfile
+          pnpm lint

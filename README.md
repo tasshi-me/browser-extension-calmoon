@@ -56,13 +56,13 @@ See [CHANGELOG.md](CHANGELOG.md).
 
 ```
 # setup
-$ yarn
+$ pnpm install
 
 # development build
-$ yarn start
+$ pnpm start
 
 # production build
-$ yarn build
+$ pnpm build
 ```
 
 ## Lisence
