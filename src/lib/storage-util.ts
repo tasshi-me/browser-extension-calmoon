@@ -13,8 +13,8 @@ export const SyncStorage = {
       "autoReadInterval",
     ]);
     return {
-      enableAutoRead: record.enableAutoRead ?? false,
-      autoReadInterval: record.autoReadInterval ?? 5,
+      enableAutoRead: (record.enableAutoRead as boolean | undefined) ?? false,
+      autoReadInterval: (record.autoReadInterval as number | undefined) ?? 5,
     };
   },
 
@@ -26,7 +26,7 @@ export const SyncStorage = {
 export const LocalStorage = {
   getLastAutoReadTimestamp: async (): Promise<number> => {
     const record = await browser.storage.local.get(["lastAutoReadTimestamp"]);
-    return record.lastAutoReadTimestamp ?? 0;
+    return (record.lastAutoReadTimestamp as number | undefined) ?? 0;
   },
 
   setLastAutoReadTimestamp: async (
