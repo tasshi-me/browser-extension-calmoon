@@ -6,6 +6,7 @@
   "repository": "git@github.com:tasshi-me/browser-extension-calmoon.git",
   "author": "Masaharu TASHIRO <masatsr.kit@gmail.com>",
   "license": "MIT",
+  "packageManager": "pnpm@12.11.2",
   "scripts": {
     "prestart": "run-s clean:dev",
     "prebuild": "run-s clean:prod",
