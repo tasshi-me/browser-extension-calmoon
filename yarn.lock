@@ -205,10 +205,10 @@
   dependencies:
     "@jridgewell/trace-mapping" "0.3.9"
 
-"@cybozu/eslint-config@^26.0.1":
-  version "26.0.1"
-  resolved "https://npm.flatt.tech/@cybozu/eslint-config/-/eslint-config-26.0.1.tgz#abe686ce343c7bde1b5c7c39a5a0b2ab3f0f83d6"
-  integrity sha512-0fCpLGQYmOCHiVNZzP1+tF2xBP/O/HhxQdjRKTIXYK+V/eaPnM3NVCaDYyPOZkeEDaUZGWktCs39SdWrfGE1gQ==
+"@cybozu/eslint-config@^26.1.0":
+  version "26.1.0"
+  resolved "https://registry.yarnpkg.com/@cybozu/eslint-config/-/eslint-config-26.1.0.tgz#fc35ab920a34ebf1760cb1a629d3365dec4bbcf4"
+  integrity sha512-S62AeGVM+w5UL7meHypaz5f4v9Yo0cfwTtGRnNhmVWjcLrbHnMHsYJuZQwduj0a7d9wAxFtPQq9CjRlT7rpGvw==
   dependencies:
     "@eslint/css" "^1.4.0"
     "@eslint/js" "^10.0.1"
