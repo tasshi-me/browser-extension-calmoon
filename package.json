@@ -58,7 +58,7 @@
     "ts-loader": "^9.6.2",
     "ts-node": "^10.9.2",
     "typescript": "^5.9.3",
-    "vite": "^8.3.6",
+    "vite": "^8.3.7",
     "vitest": "^5.1.0",
     "web-ext": "^10.8.0",
     "webextension-polyfill": "^0.12.0",
