@@ -5,7 +5,7 @@
 
 ### Features
 
-* disable "Notify attendees of this appointment update" notification when changing an appointment ([#737](https://github.com/tasshi-me/browser-extension-calmoon/issues/737)) ([4dc3995](https://github.com/tasshi-me/browser-extension-calmoon/commit/4dc39958049c3643ed5c61d843c2ffe0b07d4445))
+* disable "Notify attendees of this appointment update" notification when changing an appointment ([#737](https://github.com/tasshi-me/browser-extension-calmoon/issues/737)) ([4dc3995](https://github.com/tasshi-me/browser-extension-calmoon/commit/4dc39958049c3643ed5c61d843c2ffe0b07d4445)), by [@matsuo](https://github.com/matsuo)
 
 ## [1.3.3](https://github.com/tasshi-me/browser-extension-calmoon/compare/browser-extension-calmoon-v1.3.2...browser-extension-calmoon-v1.3.3) (2025-08-03)
 
