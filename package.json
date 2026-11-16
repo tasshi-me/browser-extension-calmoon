@@ -52,7 +52,7 @@
     "json-minimizer-webpack-plugin": "^5.0.1",
     "merge-jsons-webpack-plugin": "^2.0.1",
     "mini-css-extract-plugin": "^2.10.2",
-    "npm-run-all2": "^5.0.2",
+    "npm-run-all2": "^9.0.4",
     "prettier": "^3.10.1",
     "release-please": "^17.11.2",
     "rimraf": "^6.1.4",
