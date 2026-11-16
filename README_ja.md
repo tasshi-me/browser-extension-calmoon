@@ -1,10 +1,10 @@
 <img src="src/icons/icon-128.png" alt="通知オフ太郎のアイコン" align="right" />
 
-# 通知オフ太郎 for Garoon ![Production](https://github.com/tasshi-me/browser-extension-calmoon/workflows/Production/badge.svg) ![Development](https://github.com/tasshi-me/browser-extension-calmoon/workflows/Development/badge.svg)
+# 通知オフ太郎 for Garoon [![test](https://github.com/tasshi-me/browser-extension-calmoon/actions/workflows/test.yml/badge.svg)](https://github.com/tasshi-me/browser-extension-calmoon/actions/workflows/test.yml) [![lint](https://github.com/tasshi-me/browser-extension-calmoon/actions/workflows/lint.yml/badge.svg)](https://github.com/tasshi-me/browser-extension-calmoon/actions/workflows/lint.yml)
 
 あなたを[Garoon](https://garoon.cybozu.co.jp/)の不要な通知を送る/受け取ることから解放します :shushing_face:
 
-- 予定に参加/抜けるときの「この更新を通知する」をデフォルトでオフにします
+- 予定に参加/抜けるとき・予定を変更するときの「この更新を通知する」をデフォルトでオフにします
 - 不要な通知を自動で既読にして本来見るべき通知に集中できるようにします
 
 For English readers: [README.md](README.md)
@@ -23,12 +23,12 @@ ZIP ファイルが必要な方は[リリースノート](https://github.com/tas
 
 ## 使い方
 
-### 参加/抜けるときの通知をオフにする機能
+### 参加/抜ける/変更するときの通知をオフにする機能
 
-Garoon の予定への参加または予定を抜ける画面において、「この更新を通知する」というチェックボックスが自動でオフになる機能です。  
+Garoon の予定への参加、予定を抜ける、または予定を変更する画面において、「この更新を通知する」（予定変更時は「この予定の更新を参加者に通知する」）というチェックボックスが自動でオフになる機能です。  
 通知オフ太郎をインストールすると自動で有効になります。
 
-### [NEW!] 不要な通知を自動で既読にする機能
+### 不要な通知を自動で既読にする機能
 
 Garoon で受け取る通知のうち、以下のルールに当てはまる通知を自動で既読にする機能です。
 
