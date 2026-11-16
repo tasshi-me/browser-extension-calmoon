@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
-      - uses: pnpm/action-setup@b906affcce14559ad1aafd4ab0e942779e9f58b1 # v4
+      - uses: pnpm/action-setup@73e46992e05b19abd31f2f3c20e0e7370d762115 # v6
       - uses: nodenv/actions/node-version@a951c9ffd012545fc0867d4b3cbd986c12c4a3c0 # main
         id: nodenv
       - name: Use Node.js ${{ steps.nodenv.outputs.node-version }}
