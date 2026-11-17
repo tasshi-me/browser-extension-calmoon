@@ -216,7 +216,7 @@ importers:
         specifier: ^7.1.5
         version: 7.1.5(webpack@5.112.2)
       eslint:
-        specifier: ^10.14.0
+        specifier: ^10.15.0
         version: 10.15.0(supports-color@8.1.1)
       extract-loader:
         specifier: ^5.1.0
